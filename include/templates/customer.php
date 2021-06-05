@@ -124,7 +124,7 @@ if($idupd>0)
                                             <div class="form-group">
                                                 <label >Customer Code</label>
                                                 <input type="text" tabindex="1" readonly  class="form-control" id="customercode" name="customerCode" value="<?php if(isset($customercode )) echo $customercode ; ?>" >
-                                                <label id="customeridcheck" class="text-danger">Enter Customer Code</label>
+                                                <!-- <label id="customeridcheck" class="text-danger">Enter Customer Code</label> -->
 
                                             </div>
                                         </div>
@@ -220,9 +220,9 @@ if($idupd>0)
 
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
-                                                <label for="disabledInput">Anniversery Date</label>
+                                                <label for="disabledInput">Anniversary Date</label>
                                                 <input type="date" tabindex="6" id="anniverserydate" name="anniverserydate" class="form-control" value="<?php if(isset($anniverserydate )) echo $anniverserydate ; ?>">
-                                                <label id="anniverserydatecheck" class="text-danger">Select Anniversery Date</label>
+                                                <label id="anniverserydatecheck" class="text-danger">Select Anniversary Date</label>
                                             </div>
                                         </div>
 

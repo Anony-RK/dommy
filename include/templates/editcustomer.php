@@ -60,7 +60,7 @@ if($mscid==3)
 											  <th>Age</th>
 											  <th>Mobile Number</th>
 											  <th>Whatsapp Number</th>
-											  <th>Anniversery Date</th>
+											  <th>Anniversary Date</th>
 											  <th>Email Id</th>
 											  <th>Need Membership</th>
 
