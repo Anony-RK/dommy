@@ -69,7 +69,9 @@ if($mscid==3)
 											  <th>Address1</th>
 											  <th>Address2 </th>								  
 											  <th>Pincode</th>
+											  <th>Country</th>
 											  <th>State</th>
+											  <th>District</th>
 
 											  <th>Type Of Customer</th>
 											  <th>No Of Visit</th>

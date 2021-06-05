@@ -20,7 +20,9 @@ $column = array(
     'address1',
     'address2',
     'pincode',    
-	'state',
+	'country',
+    'state',
+    'district',
 
 	'typeofcustomer',
     'noofvisit', 
@@ -72,7 +74,9 @@ else{
  OR address1 LIKE '%".$_POST['search']."%'
  OR address2 LIKE '%".$_POST['search']."%'
  OR pincode LIKE '%".$_POST['search']."%'
+ OR country LIKE '%".$_POST['search']."%'
  OR state LIKE '%".$_POST['search']."%'
+ OR district LIKE '%".$_POST['search']."%'
 
 
  OR typeofcustomer LIKE '%".$_POST['search']."%'
@@ -136,7 +140,9 @@ foreach ($result as $row) {
     $sub_array[] = $row['address1'];
     $sub_array[] = $row['address2'];
     $sub_array[] = $row['pincode'];
+    $sub_array[] = $row['country'];
     $sub_array[] = $row['state'];
+    $sub_array[] = $row['district'];
 
     $sub_array[] = $row['typeofcustomer'];
     $sub_array[] = $row['noofvisit'];

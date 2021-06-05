@@ -1708,11 +1708,16 @@ public function addcustomer($mysqli)
 		if (isset($_POST['pincode'])) {
 		$pincode               = mysqli_real_escape_string($mysqli,$_POST['pincode']);		
 		}
+		if (isset($_POST['country'])) {
+			$country               = mysqli_real_escape_string($mysqli,$_POST['country']);		
+			}
 		if (isset($_POST['state'])) {
 		$state               = mysqli_real_escape_string($mysqli,$_POST['state']);		
 		}
 		
-
+		if (isset($_POST['district'])) {
+			$district               = mysqli_real_escape_string($mysqli,$_POST['district']);		
+			}
 	if (isset($_POST['typeofcustomer'])) {
 	$typeofcustomer             = mysqli_real_escape_string($mysqli,$_POST['typeofcustomer']);		
 	}	
@@ -1774,7 +1779,7 @@ move_uploaded_file($customerimage_tmp, $customerimagefolder);
 	$qry = "INSERT INTO customer(customercode , customername, gender, dateofbirth,
 	 customerimage, age, mobilenumber, whatsappnumber,
 	 anniverserydate, emailid, needmembership,gstno, contactpersion, address1,
-	 address2, pincode, state,typeofcustomer,
+	 address2, pincode,country, state,district,typeofcustomer,
 	  noofvisit, frequencyofvisit,subgroup,groups,ledgername,costcenter,inventory,status) 
 	VALUES (
 		'".strip_tags($customercode)."',
@@ -1793,7 +1798,9 @@ move_uploaded_file($customerimage_tmp, $customerimagefolder);
 	'".strip_tags($address1)."',
 	'".strip_tags($address2)."',
 	'".strip_tags($pincode)."',
+	'".strip_tags($country)."',
 	'".strip_tags($state)."',
+	'".strip_tags($district)."',
 
 
 	'".strip_tags($typeofcustomer)."',
@@ -1883,10 +1890,15 @@ public function updatecustomer($mysqli,$id){
 		if (isset($_POST['pincode'])) {
 		$pincode               = mysqli_real_escape_string($mysqli,$_POST['pincode']);		
 		}
+		if (isset($_POST['country'])) {
+			$country               = mysqli_real_escape_string($mysqli,$_POST['country']);		
+			}
 		if (isset($_POST['state'])) {
 		$state               = mysqli_real_escape_string($mysqli,$_POST['state']);		
 		}
-
+		if (isset($_POST['district'])) {
+			$district               = mysqli_real_escape_string($mysqli,$_POST['district']);		
+			}
 
 
 	if (isset($_POST['typeofcustomer'])) {
@@ -1966,7 +1978,9 @@ public function updatecustomer($mysqli,$id){
  address1="'.strip_tags($address1).'" ,	
  address2="'.strip_tags($address2).'", 
  pincode="'.strip_tags($pincode).'" ,
+ state="'.strip_tags($country).'" ,
  state="'.strip_tags($state).'" ,
+ state="'.strip_tags($district).'" ,
 
  typeofcustomer="'.strip_tags($typeofcustomer).'", 
  noofvisit="'.strip_tags($noofvisit).'" ,
@@ -2010,7 +2024,9 @@ public function getcustomer($mysqli,$idupd)
 		$detailrecords['address1']                   = strip_tags($row->address1);		  	
 		$detailrecords['address2']                    = strip_tags($row->address2);	
 		$detailrecords['pincode']       	           = strip_tags($row->pincode);
+		$detailrecords['country']       	       = strip_tags($row->country);
 		$detailrecords['state']       	       = strip_tags($row->state);
+		$detailrecords['district']       	       = strip_tags($row->district);
 
 		$detailrecords['typeofcustomer']              = strip_tags($row->typeofcustomer);		  	
 		$detailrecords['noofvisit']             = strip_tags($row->noofvisit);	

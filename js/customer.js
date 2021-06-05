@@ -413,16 +413,33 @@ function mobilenumber() {
      }
    }
 
+    //country
+    $("#countrycheck").hide();
+    let countryerror = true;
+    $("#countySel").keyup(function () {
+      country();
+    });
+    function country() {
+      let countryValue = $("#countySel").val();
+      if (countryValue == "") {
+        $("#countrycheck").show();
+        countryerror = false;
+        return false;
+      } else {
+        $("#countrycheck").hide();
+        countryerror = true;
+      }
+    }
 
 
         //state
         $("#statecheck").hide();
         let stateerror = true;
-        $("#state").keyup(function () {
+        $("#stateSel").keyup(function () {
           state();
         });
         function state() {
-          let stateValue = $("#state").val();
+          let stateValue = $("#stateSel").val();
           if (stateValue == "") {
             $("#statecheck").show();
             stateerror = false;
@@ -433,7 +450,23 @@ function mobilenumber() {
           }
         }
 
-
+ //district
+ $("#districtcheck").hide();
+ let districterror = true;
+ $("#districtSel").keyup(function () {
+   district();
+ });
+ function district() {
+   let districtValue = $("#districtSel").val();
+   if (districtValue == "") {
+     $("#districtcheck").show();
+     districterror = false;
+     return false;
+   } else {
+     $("#districtcheck").hide();
+     districterror = true;
+   }
+ }
         
         //subgroup
         $("#subgroupcheck").hide();
@@ -527,6 +560,14 @@ function mobilenumber() {
     anniverserydate();
     whatsappnumber();
     needmembership();
+    gstno();
+    country();
+    state();
+    address1();
+    address2();
+    pincode();
+    contactpersion();
+    district();
     customerimage();
     typeofcustomer();
     noofvisit();
@@ -537,10 +578,18 @@ function mobilenumber() {
         && gendererror == true 
         && dateofbirtherror == true 
         && ageerror == true 
+        && gsterror ==true
+        && contactpersionerror ==true
+        && address1error ==true
+        && address2error ==true
+        && pincode2error ==true
         && mobilenumbererror == true
         && whatsappnumbererror == true
         && anniverserydateerror == true
         && needmembershiperror == true
+        && countryerror ==true
+        && stateerror == true
+        && districterror == true
         && customerimageerror == true
         && typeofcustomererror == true
         && noofvisiterror == true
@@ -595,4 +644,6 @@ function customerBulkupload(){
     }
 
     
-  
+  // State, Country,district Select option 
+
+ 

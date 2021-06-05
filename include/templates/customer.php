@@ -58,7 +58,9 @@ if($idupd>0)
             $address1                 = $getcustomer['address1'];
             $address2                 = $getcustomer['address2'];
             $pincode                  = $getcustomer['pincode'];
+            $state                    = $getcustomer['country'];
             $state                    = $getcustomer['state'];
+            $state                    = $getcustomer['district'];
             
 
 			$typeofcustomer	         = $getcustomer['typeofcustomer'];
@@ -288,45 +290,75 @@ if($idupd>0)
                                                 <label id="pincodecheck" class="text-danger">Enter Pincode</label>
                                             </div>
                                         </div>
-
-
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="disabledInput">Country</label>
+                                                <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->                                               
+                                                <select class="form-control chosen-select comp-field" name="country" id="countySel" size="1">
+                                                <option value="" <?php if(isset($country)) { echo 'selected'; }  ?>  selected="selected">Select Country</option>
+                                                </select>
+                                                <label id="countrycheck" class="text-danger">Select Country</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="disabledInput">State</label>
+                                                <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->
+                                                <select class="form-control chosen-select comp-field" name="state" id="stateSel" size="1">
+                                                <option value="" <?php if(isset($state)) {  echo 'selected'; }  ?> selected="selected">Please select Country first</option>
+                                                </select>
+                                                <label id="statecheck" class="text-danger">Select State</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="disabledInput">District</label>
+                                                <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->
+                                                <select class="form-control chosen-select comp-field" name="district" id="districtSel" size="1">
+                                                <option value="" <?php if(isset($district)) { echo 'selected'; }  ?> selected="selected">Please select State first</option>
+                                                </select>
+                                                <label id="districtcheck" class="text-danger">Select District</label>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">State</label>                                               
                                                 <select class="form-control chosen-select comp-field " id="state" name="state"><option value="">Select a State...</option>
-                                                    <option <?php if(isset($state)) { if($state == "Andhra Pradesh" ) echo 'selected'; }  ?>  value="Andhra Pradesh">Andhra Pradesh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Arunachal Pradesh" ) echo 'selected'; }  ?>  value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Assam" ) echo 'selected'; }  ?>  value="Assam ">Assam </option>
-                                                    <option <?php if(isset($state)) { if($state == "Bihar" ) echo 'selected'; }  ?>  value="Bihar ">Bihar </option>
-                                                    <option <?php if(isset($state)) { if($state == "Chandigarh" ) echo 'selected'; }  ?>  value="Chandigarh ">Chandigarh </option>
-                                                    <option <?php if(isset($state)) { if($state == "Chandigarh" ) echo 'selected'; }  ?>  value="Chandigarh">Chandigarh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Gujarat" ) echo 'selected'; }  ?>  value="Gujarat">Gujarat</option>
-                                                    <option <?php if(isset($state)) { if($state == "Haryana" ) echo 'selected'; }  ?>  value="Haryana">Haryana</option>
-                                                    <option <?php if(isset($state)) { if($state == "Himachal Pradesh" ) echo 'selected'; }  ?>  value="Himachal Pradesh">Himachal Pradesh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Jharkhand" ) echo 'selected'; }  ?>  value="Jharkhand">Jharkhand</option>
-                                                    <option <?php if(isset($state)) { if($state == "Karnataka" ) echo 'selected'; }  ?>  value="Karnataka">Karnataka</option>
-                                                    <option <?php if(isset($state)) { if($state == "Kerala" ) echo 'selected'; }  ?>  value="Kerala">Kerala</option>
-                                                    <option <?php if(isset($state)) { if($state == "Madhya Pradesh" ) echo 'selected'; }  ?>  value="Madhya Pradesh">Madhya Pradesh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Maharashtra" ) echo 'selected'; }  ?>  value="Maharashtra">Maharashtra</option>
-                                                    <option <?php if(isset($state)) { if($state == "Manipur" ) echo 'selected'; }  ?>  value="Manipur">Manipur</option>
-                                                    <option <?php if(isset($state)) { if($state == "Meghalaya" ) echo 'selected'; }  ?>  value="Meghalaya">Meghalaya</option>
-                                                    <option <?php if(isset($state)) { if($state == "Mizoram" ) echo 'selected'; }  ?>  value="Mizoram">Mizoram</option>
-                                                    <option <?php if(isset($state)) { if($state == "Nagaland" ) echo 'selected'; }  ?>  value="Nagaland">Nagaland</option>
-                                                    <option <?php if(isset($state)) { if($state == "Odisha" ) echo 'selected'; }  ?>  value="Odisha">Odisha</option>
-                                                    <option <?php if(isset($state)) { if($state == "Puducherry" ) echo 'selected'; }  ?>  value="Puducherry">Puducherry</option>
-                                                    <option <?php if(isset($state)) { if($state == "Punjab" ) echo 'selected'; }  ?>  value="Punjab">Punjab</option>
-                                                    <option <?php if(isset($state)) { if($state == "Rajasthan" ) echo 'selected'; }  ?>  value="Rajasthan">Rajasthan</option>
-                                                    <option <?php if(isset($state)) { if($state == "Sikkim" ) echo 'selected'; }  ?>  value="Sikkim">Sikkim</option>
-                                                    <option <?php if(isset($state)) { if($state == "Tamil Nadu" ) echo 'selected'; }  ?>  value="Tamil Nadu">Tamil Nadu</option>
-                                                    <option <?php if(isset($state)) { if($state == "Telangana" ) echo 'selected'; }  ?>  value="Telangana">Telangana</option>
-                                                    <option <?php if(isset($state)) { if($state == "Tripura" ) echo 'selected'; }  ?>  value="Tripura">Tripura</option>
-                                                    <option <?php if(isset($state)) { if($state == "Uttar Pradesh" ) echo 'selected'; }  ?>  value="Uttar Pradesh">Uttar Pradesh</option>
-                                                    <option <?php if(isset($state)) { if($state == "Uttarakhand" ) echo 'selected'; }  ?>  value="Uttarakhand">Uttarakhand</option>
-                                                    <option <?php if(isset($state)) { if($state == "West Bengal" ) echo 'selected'; }  ?>  value="West Bengal">West Bengal</option>
+                                                    <option   value="Andhra Pradesh">Andhra Pradesh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Arunachal Pradesh" ) echo 'selected'; }  ?>  value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Assam" ) echo 'selected'; }  ?>  value="Assam ">Assam </option>
+                                                    <option <?php //if(isset($state)) { if($state == "Bihar" ) echo 'selected'; }  ?>  value="Bihar ">Bihar </option>
+                                                    <option <?php //if(isset($state)) { if($state == "Chandigarh" ) echo 'selected'; }  ?>  value="Chandigarh ">Chandigarh </option>
+                                                    <option <?php //if(isset($state)) { if($state == "Chandigarh" ) echo 'selected'; }  ?>  value="Chandigarh">Chandigarh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Gujarat" ) echo 'selected'; }  ?>  value="Gujarat">Gujarat</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Haryana" ) echo 'selected'; }  ?>  value="Haryana">Haryana</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Himachal Pradesh" ) echo 'selected'; }  ?>  value="Himachal Pradesh">Himachal Pradesh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Jharkhand" ) echo 'selected'; }  ?>  value="Jharkhand">Jharkhand</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Karnataka" ) echo 'selected'; }  ?>  value="Karnataka">Karnataka</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Kerala" ) echo 'selected'; }  ?>  value="Kerala">Kerala</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Madhya Pradesh" ) echo 'selected'; }  ?>  value="Madhya Pradesh">Madhya Pradesh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Maharashtra" ) echo 'selected'; }  ?>  value="Maharashtra">Maharashtra</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Manipur" ) echo 'selected'; }  ?>  value="Manipur">Manipur</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Meghalaya" ) echo 'selected'; }  ?>  value="Meghalaya">Meghalaya</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Mizoram" ) echo 'selected'; }  ?>  value="Mizoram">Mizoram</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Nagaland" ) echo 'selected'; }  ?>  value="Nagaland">Nagaland</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Odisha" ) echo 'selected'; }  ?>  value="Odisha">Odisha</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Puducherry" ) echo 'selected'; }  ?>  value="Puducherry">Puducherry</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Punjab" ) echo 'selected'; }  ?>  value="Punjab">Punjab</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Rajasthan" ) echo 'selected'; }  ?>  value="Rajasthan">Rajasthan</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Sikkim" ) echo 'selected'; }  ?>  value="Sikkim">Sikkim</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Tamil Nadu" ) echo 'selected'; }  ?>  value="Tamil Nadu">Tamil Nadu</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Telangana" ) echo 'selected'; }  ?>  value="Telangana">Telangana</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Tripura" ) echo 'selected'; }  ?>  value="Tripura">Tripura</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Uttar Pradesh" ) echo 'selected'; }  ?>  value="Uttar Pradesh">Uttar Pradesh</option>
+                                                    <option <?php //if(isset($state)) { if($state == "Uttarakhand" ) echo 'selected'; }  ?>  value="Uttarakhand">Uttarakhand</option>
+                                                    <option <?php //if(isset($state)) { if($state == "West Bengal" ) echo 'selected'; }  ?>  value="West Bengal">West Bengal</option>
                                                 </select>
                                                 <label id="statecheck" class="text-danger">Enter State</label>
                                             </div>
-                                        </div>
+                                        </div> -->
 
 
 
@@ -540,5 +572,798 @@ if($idupd>0)
 </form>
 </div>
 
+<script>
 
+var stateObject = {
+    "India": 
+        { 
+        
+        "Andhra Pradesh	": 
+                        ["Araku",
+    "Srikakulam",
+    "Vizianagaram",
+    "Visakhapatnam",
+    "Anakapalle",
+    "Kakinada",
+    "Amalapuram",
+    "Rajahmundry",
+    "Narsapuram",
+    "Eluru",
+    "Machilipatnam",
+    "Vijayawada",
+    "Guntur",
+    "Narasaraopet",
+    "Bapatla",
+    "Ongole",
+    "Nandyal",
+    "Kurnool",
+    "Anantapur",
+    "Hindupur",
+    "Kadapa",
+    "Nellore",
+    "Tirupati",
+    "Chittoor",
+    "Rajampet"],
+        "Arunachal Pradesh": [
+        "Tawang",
+                 "West Kameng",
+                 "East Kameng",
+                 "Papum Pare",
+                 "Kurung Kumey",
+                 "Kra Daadi",
+                 "Lower Subansiri",
+                 "Upper Subansiri",
+                 "West Siang",
+                 "East Siang",
+                 "Siang",
+                 "Upper Siang",
+                 "Lower Siang",
+                 "Lower Dibang Valley",
+                 "Dibang Valley",
+                 "Anjaw",
+                 "Lohit",
+                 "Namsai",
+                 "Changlang",
+                 "Tirap",
+                 "Longding"
+        ],
+        "Assam": [
+        "Baksa",
+                 "Barpeta",
+                 "Biswanath",
+                 "Bongaigaon",
+                 "Cachar",
+                 "Charaideo",
+                 "Chirang",
+                 "Darrang",
+                 "Dhemaji",
+                 "Dhubri",
+                 "Dibrugarh",
+                 "Goalpara",
+                 "Golaghat",
+                 "Hailakandi",
+                 "Hojai",
+                 "Jorhat",
+                 "Kamrup Metropolitan",
+                 "Kamrup",
+                 "Karbi Anglong",
+                 "Karimganj",
+                 "Kokrajhar",
+                 "Lakhimpur",
+                 "Majuli",
+                 "Morigaon",
+                 "Nagaon",
+                 "Nalbari",
+                 "Dima Hasao",
+                 "Sivasagar",
+                 "Sonitpur",
+                 "South Salmara-Mankachar",
+                 "Tinsukia",
+                 "Udalguri",
+                 "West Karbi Anglong"
+        ],
+        "Bihar": [
+        "Araria",
+                 "Arwal",
+                 "Aurangabad",
+                 "Banka",
+                 "Begusarai",
+                 "Bhagalpur",
+                 "Bhojpur",
+                 "Buxar",
+                 "Darbhanga",
+                 "East Champaran (Motihari)",
+                 "Gaya",
+                 "Gopalganj",
+                 "Jamui",
+                 "Jehanabad",
+                 "Kaimur (Bhabua)",
+                 "Katihar",
+                 "Khagaria",
+                 "Kishanganj",
+                 "Lakhisarai",
+                 "Madhepura",
+                 "Madhubani",
+                 "Munger (Monghyr)",
+                 "Muzaffarpur",
+                 "Nalanda",
+                 "Nawada",
+                 "Patna",
+                 "Purnia (Purnea)",
+                 "Rohtas",
+                 "Saharsa",
+                 "Samastipur",
+                 "Saran",
+                 "Sheikhpura",
+                 "Sheohar",
+                 "Sitamarhi",
+                 "Siwan",
+                 "Supaul",
+                 "Vaishali",
+                 "West Champaran"
+        ],
+        "Chhattisgarh": [
+        "Balod",
+                 "Baloda Bazar",
+                 "Balrampur",
+                 "Bastar",
+                 "Bemetara",
+                 "Bijapur",
+                 "Bilaspur",
+                 "Dantewada (South Bastar)",
+                 "Dhamtari",
+                 "Durg",
+                 "Gariyaband",
+                 "Janjgir-Champa",
+                 "Jashpur",
+                 "Kabirdham (Kawardha)",
+                 "Kanker (North Bastar)",
+                 "Kondagaon",
+                 "Korba",
+                 "Korea (Koriya)",
+                 "Mahasamund",
+                 "Mungeli",
+                 "Narayanpur",
+                 "Raigarh",
+                 "Raipur",
+                 "Rajnandgaon",
+                 "Sukma",
+                 "Surajpur  ",
+                 "Surguja"
+        ],
+        "Delhi": [
+        "Central Delhi",
+                 "East Delhi",
+                 "New Delhi",
+                 "North Delhi",
+                 "North East  Delhi",
+                 "North West  Delhi",
+                 "Shahdara",
+                 "South Delhi",
+                 "South East Delhi",
+                 "South West  Delhi",
+                 "West Delhi"
+        ],
+        "Goa": [
+        "North Goa", "South Goa"
+        ],
+        "Gujarat": [
+        "Ahmedabad",
+                 "Amreli",
+                 "Anand",
+                 "Aravalli",
+                 "Banaskantha (Palanpur)",
+                 "Bharuch",
+                 "Bhavnagar",
+                 "Botad",
+                 "Chhota Udepur",
+                 "Dahod",
+                 "Dangs (Ahwa)",
+                 "Devbhoomi Dwarka",
+                 "Gandhinagar",
+                 "Gir Somnath",
+                 "Jamnagar",
+                 "Junagadh",
+                 "Kachchh",
+                 "Kheda (Nadiad)",
+                 "Mahisagar",
+                 "Mehsana",
+                 "Morbi",
+                 "Narmada (Rajpipla)",
+                 "Navsari",
+                 "Panchmahal (Godhra)",
+                 "Patan",
+                 "Porbandar",
+                 "Rajkot",
+                 "Sabarkantha (Himmatnagar)",
+                 "Surat",
+                 "Surendranagar",
+                 "Tapi (Vyara)",
+                 "Vadodara",
+                 "Valsad"
+        ],
+        "Haryana": [
+        "Ambala",
+                 "Bhiwani",
+                 "Charkhi Dadri",
+                 "Faridabad",
+                 "Fatehabad",
+                 "Gurgaon",
+                 "Hisar",
+                 "Jhajjar",
+                 "Jind",
+                 "Kaithal",
+                 "Karnal",
+                 "Kurukshetra",
+                 "Mahendragarh",
+                 "Mewat",
+                 "Palwal",
+                 "Panchkula",
+                 "Panipat",
+                 "Rewari",
+                 "Rohtak",
+                 "Sirsa",
+                 "Sonipat",
+                 "Yamunanagar"
+        ],
+        "Himachal Pradesh": [
+        "Bilaspur",
+                 "Chamba",
+                 "Hamirpur",
+                 "Kangra",
+                 "Kinnaur",
+                 "Kullu",
+                 "Lahaul &amp; Spiti",
+                 "Mandi",
+                 "Shimla",
+                 "Sirmaur (Sirmour)",
+                 "Solan",
+                 "Una"
+        ],
+        "Jammu and Kashmir": [
+        "Anantnag",
+                 "Bandipore",
+                 "Baramulla",
+                 "Budgam",
+                 "Doda",
+                 "Ganderbal",
+                 "Jammu",
+                 "Kargil",
+                 "Kathua",
+                 "Kishtwar",
+                 "Kulgam",
+                 "Kupwara",
+                 "Leh",
+                 "Poonch",
+                 "Pulwama",
+                 "Rajouri",
+                 "Ramban",
+                 "Reasi",
+                 "Samba",
+                 "Shopian",
+                 "Srinagar",
+                 "Udhampur"
+        ],
+        "Jharkhand": [
+        "Bokaro",
+                 "Chatra",
+                 "Deoghar",
+                 "Dhanbad",
+                 "Dumka",
+                 "East Singhbhum",
+                 "Garhwa",
+                 "Giridih",
+                 "Godda",
+                 "Gumla",
+                 "Hazaribag",
+                 "Jamtara",
+                 "Khunti",
+                 "Koderma",
+                 "Latehar",
+                 "Lohardaga",
+                 "Pakur",
+                 "Palamu",
+                 "Ramgarh",
+                 "Ranchi",
+                 "Sahibganj",
+                 "Seraikela-Kharsawan",
+                 "Simdega",
+                 "West Singhbhum"
+        ],
+        "Karnataka": [
+        "Bagalkot",
+                 "Ballari (Bellary)",
+                 "Belagavi (Belgaum)",
+                 "Bengaluru (Bangalore) Rural",
+                 "Bengaluru (Bangalore) Urban",
+                 "Bidar",
+                 "Chamarajanagar",
+                 "Chikballapur",
+                 "Chikkamagaluru (Chikmagalur)",
+                 "Chitradurga",
+                 "Dakshina Kannada",
+                 "Davangere",
+                 "Dharwad",
+                 "Gadag",
+                 "Hassan",
+                 "Haveri",
+                 "Kalaburagi (Gulbarga)",
+                 "Kodagu",
+                 "Kolar",
+                 "Koppal",
+                 "Mandya",
+                 "Mysuru (Mysore)",
+                 "Raichur",
+                 "Ramanagara",
+                 "Shivamogga (Shimoga)",
+                 "Tumakuru (Tumkur)",
+                 "Udupi",
+                 "Uttara Kannada (Karwar)",
+                 "Vijayapura (Bijapur)",
+                 "Yadgir"
+        ],
+        "Kerala": [
+        "Alappuzha",
+                 "Ernakulam",
+                 "Idukki",
+                 "Kannur",
+                 "Kasaragod",
+                 "Kollam",
+                 "Kottayam",
+                 "Kozhikode",
+                 "Malappuram",
+                 "Palakkad",
+                 "Pathanamthitta",
+                 "Thiruvananthapuram",
+                 "Thrissur",
+                 "Wayanad"
+        ],
+        "Madhya Pradesh": [
+        "Agar Malwa",
+                 "Alirajpur",
+                 "Anuppur",
+                 "Ashoknagar",
+                 "Balaghat",
+                 "Barwani",
+                 "Betul",
+                 "Bhind",
+                 "Bhopal",
+                 "Burhanpur",
+                 "Chhatarpur",
+                 "Chhindwara",
+                 "Damoh",
+                 "Datia",
+                 "Dewas",
+                 "Dhar",
+                 "Dindori",
+                 "Guna",
+                 "Gwalior",
+                 "Harda",
+                 "Hoshangabad",
+                 "Indore",
+                 "Jabalpur",
+                 "Jhabua",
+                 "Katni",
+                 "Khandwa",
+                 "Khargone",
+                 "Mandla",
+                 "Mandsaur",
+                 "Morena",
+                 "Narsinghpur",
+                 "Neemuch",
+                 "Panna",
+                 "Raisen",
+                 "Rajgarh",
+                 "Ratlam",
+                 "Rewa",
+                 "Sagar",
+                 "Satna",
+                 "Sehore",
+                 "Seoni",
+                 "Shahdol",
+                 "Shajapur",
+                 "Sheopur",
+                 "Shivpuri",
+                 "Sidhi",
+                 "Singrauli",
+                 "Tikamgarh",
+                 "Ujjain",
+                 "Umaria",
+                 "Vidisha"
+        ],
+        "Maharashtra": [
+        "Ahmednagar",
+                 "Akola",
+                 "Amravati",
+                 "Aurangabad",
+                 "Beed",
+                 "Bhandara",
+                 "Buldhana",
+                 "Chandrapur",
+                 "Dhule",
+                 "Gadchiroli",
+                 "Gondia",
+                 "Hingoli",
+                 "Jalgaon",
+                 "Jalna",
+                 "Kolhapur",
+                 "Latur",
+                 "Mumbai City",
+                 "Mumbai Suburban",
+                 "Nagpur",
+                 "Nanded",
+                 "Nandurbar",
+                 "Nashik",
+                 "Osmanabad",
+                 "Palghar",
+                 "Parbhani",
+                 "Pune",
+                 "Raigad",
+                 "Ratnagiri",
+                 "Sangli",
+                 "Satara",
+                 "Sindhudurg",
+                 "Solapur",
+                 "Thane",
+                 "Wardha",
+                 "Washim",
+                 "Yavatmal"
+        ],
+        "Manipur": [
+        "Bishnupur",
+                 "Chandel",
+                 "Churachandpur",
+                 "Imphal East",
+                 "Imphal West",
+                 "Jiribam",
+                 "Kakching",
+                 "Kamjong",
+                 "Kangpokpi",
+                 "Noney",
+                 "Pherzawl",
+                 "Senapati",
+                 "Tamenglong",
+                 "Tengnoupal",
+                 "Thoubal",
+                 "Ukhrul"
+        ],
+        "Meghalaya": [
+        "East Garo Hills",
+                 "East Jaintia Hills",
+                 "East Khasi Hills",
+                 "North Garo Hills",
+                 "Ri Bhoi",
+                 "South Garo Hills",
+                 "South West Garo Hills ",
+                 "South West Khasi Hills",
+                 "West Garo Hills",
+                 "West Jaintia Hills",
+                 "West Khasi Hills"
+        ],
+        "Mizoram": [
+        "Aizawl",
+                 "Champhai",
+                 "Kolasib",
+                 "Lawngtlai",
+                 "Lunglei",
+                 "Mamit",
+                 "Saiha",
+                 "Serchhip"
+        ],
+        "Nagaland": [
+        "Dimapur",
+                 "Kiphire",
+                 "Kohima",
+                 "Longleng",
+                 "Mokokchung",
+                 "Mon",
+                 "Peren",
+                 "Phek",
+                 "Tuensang",
+                 "Wokha",
+                 "Zunheboto"
+        ],
+        "Odisha": [
+        "Angul",
+                 "Balangir",
+                 "Balasore",
+                 "Bargarh",
+                 "Bhadrak",
+                 "Boudh",
+                 "Cuttack",
+                 "Deogarh",
+                 "Dhenkanal",
+                 "Gajapati",
+                 "Ganjam",
+                 "Jagatsinghapur",
+                 "Jajpur",
+                 "Jharsuguda",
+                 "Kalahandi",
+                 "Kandhamal",
+                 "Kendrapara",
+                 "Kendujhar (Keonjhar)",
+                 "Khordha",
+                 "Koraput",
+                 "Malkangiri",
+                 "Mayurbhanj",
+                 "Nabarangpur",
+                 "Nayagarh",
+                 "Nuapada",
+                 "Puri",
+                 "Rayagada",
+                 "Sambalpur",
+                 "Sonepur",
+                 "Sundargarh"
+        ],
+        "Puducherry (UT)": [
+        "Karaikal",
+                 "Mahe",
+                 "Pondicherry",
+                 "Yanam"
+        ],
+        "Punjab": [
+        "Amritsar",
+                 "Barnala",
+                 "Bathinda",
+                 "Faridkot",
+                 "Fatehgarh Sahib",
+                 "Fazilka",
+                 "Ferozepur",
+                 "Gurdaspur",
+                 "Hoshiarpur",
+                 "Jalandhar",
+                 "Kapurthala",
+                 "Ludhiana",
+                 "Mansa",
+                 "Moga",
+                 "Muktsar",
+                 "Nawanshahr (Shahid Bhagat Singh Nagar)",
+                 "Pathankot",
+                 "Patiala",
+                 "Rupnagar",
+                 "Sahibzada Ajit Singh Nagar (Mohali)",
+                 "Sangrur",
+                 "Tarn Taran"
+        ],
+        "Rajasthan": [
+        "Ajmer",
+                 "Alwar",
+                 "Banswara",
+                 "Baran",
+                 "Barmer",
+                 "Bharatpur",
+                 "Bhilwara",
+                 "Bikaner",
+                 "Bundi",
+                 "Chittorgarh",
+                 "Churu",
+                 "Dausa",
+                 "Dholpur",
+                 "Dungarpur",
+                 "Hanumangarh",
+                 "Jaipur",
+                 "Jaisalmer",
+                 "Jalore",
+                 "Jhalawar",
+                 "Jhunjhunu",
+                 "Jodhpur",
+                 "Karauli",
+                 "Kota",
+                 "Nagaur",
+                 "Pali",
+                 "Pratapgarh",
+                 "Rajsamand",
+                 "Sawai Madhopur",
+                 "Sikar",
+                 "Sirohi",
+                 "Sri Ganganagar",
+                 "Tonk",
+                 "Udaipur"
+        ],
+        "Sikkim": [
+        "East Sikkim",
+                 "North Sikkim",
+                 "South Sikkim",
+                 "West Sikkim"
+        ],
+        "Tamil Nadu": 
+             ["Ariyalur", "Chengalpattu",
+             "Chennai", "Coimbatore",
+             "Cuddalore", "Dharmapuri",
+             "Dindigul", "Erode",
+             "Kallakurichi", "Kanchipuram",
+             "Kanyakumari", "Kanyakumari",
+             "Karur", "Krishnagiri",
+             "Madurai", "Mayiladuthurai",
+             "Nagapattinam", "Nilgiris",
+             "Namakkal", "Perambalur",
+             "Pudukkottai", "Ramanathapuram",
+             "Ranipet", "Salem",
+             "Sivaganga", "Tenkasi",
+             "Tirupur", "Tiruchirappalli",
+             "Theni", "Tirunelveli",
+             "Thanjavur", "Thoothukudi",
+             "Tirupattur", "Tiruvallur",
+             "Tiruvarur", "Tiruvannamalai",
+             "Vellore", "Viluppuram",
+             "Virudhunagar"],
+             
+    
+        "Telangana": [
+        "Adilabad","Bhadradri Kothagudem",
+    "Hyderabad","Jagtial",
+    "Jangaon","Jayashankar Bhupalpally",
+    "Jogulamba Gadwal","Kamareddy",
+    "Karimnagar","Khammam",
+    "Kumuram Bheem","Mahabubabad",
+    "Mahabubnagar","Mancherial",
+    "Medak","Medchal-Malkajgiri",
+    "Mulugu","Nagarkurnool",
+    "Nalgonda","Narayanpet",
+    "Nirmal","Nizamabad","Peddapalli",
+    "Rajanna Sircilla","Rangareddy",,
+    "Sangareddy","Siddipet","Suryapet","Vikarabad",
+    "Wanaparthy","Warangal (Rural)",
+    "Warangal (Urban)","Yadadri Bhuvanagiri"
+        ],
+        "Tripura": [
+        "Dhalai",
+                 "Gomati",
+                 "Khowai",
+                 "North Tripura",
+                 "Sepahijala",
+                 "South Tripura",
+                 "Unakoti",
+                 "West Tripura"
+        ],
+        "Uttar Pradesh": [
+        "Agra",
+                 "Aligarh",
+                 "Allahabad",
+                 "Ambedkar Nagar",
+                 "Amethi (Chatrapati Sahuji Mahraj Nagar)",
+                 "Amroha (J.P. Nagar)",
+                 "Auraiya",
+                 "Azamgarh",
+                 "Baghpat",
+                 "Bahraich",
+                 "Ballia",
+                 "Balrampur",
+                 "Banda",
+                 "Barabanki",
+                 "Bareilly",
+                 "Basti",
+                 "Bhadohi",
+                 "Bijnor",
+                 "Budaun",
+                 "Bulandshahr",
+                 "Chandauli",
+                 "Chitrakoot",
+                 "Deoria",
+                 "Etah",
+                 "Etawah",
+                 "Faizabad",
+                 "Farrukhabad",
+                 "Fatehpur",
+                 "Firozabad",
+                 "Gautam Buddha Nagar",
+                 "Ghaziabad",
+                 "Ghazipur",
+                 "Gonda",
+                 "Gorakhpur",
+                 "Hamirpur",
+                 "Hapur (Panchsheel Nagar)",
+                 "Hardoi",
+                 "Hathras",
+                 "Jalaun",
+                 "Jaunpur",
+                 "Jhansi",
+                 "Kannauj",
+                 "Kanpur Dehat",
+                 "Kanpur Nagar",
+                 "Kanshiram Nagar (Kasganj)",
+                 "Kaushambi",
+                 "Kushinagar (Padrauna)",
+                 "Lakhimpur - Kheri",
+                 "Lalitpur",
+                 "Lucknow",
+                 "Maharajganj",
+                 "Mahoba",
+                 "Mainpuri",
+                 "Mathura",
+                 "Mau",
+                 "Meerut",
+                 "Mirzapur",
+                 "Moradabad",
+                 "Muzaffarnagar",
+                 "Pilibhit",
+                 "Pratapgarh",
+                 "RaeBareli",
+                 "Rampur",
+                 "Saharanpur",
+                 "Sambhal (Bhim Nagar)",
+                 "Sant Kabir Nagar",
+                 "Shahjahanpur",
+                 "Shamali (Prabuddh Nagar)",
+                 "Shravasti",
+                 "Siddharth Nagar",
+                 "Sitapur",
+                 "Sonbhadra",
+                 "Sultanpur",
+                 "Unnao",
+                 "Varanasi"
+                
+        ],
+        "Uttarakhand": [
+        "Bageshwar",
+                 "Chamoli",
+                 "Champawat",
+                 "Dehradun",
+                 "Haridwar",
+                 "Nainital",
+                 "Pauri Garhwal",
+                 "Pithoragarh",
+                 "Rudraprayag",
+                 "Tehri Garhwal",
+                 "Udham Singh Nagar",
+                 "Uttarkashi"
+        ],
+        "West Bengal": [
+        "Alipurduar",
+                 "Bankura",
+                 "Birbhum",
+                 "Burdwan (Bardhaman)",
+                 "Cooch Behar",
+                 "Dakshin Dinajpur (South Dinajpur)",
+                 "Darjeeling",
+                 "Hooghly",
+                 "Howrah",
+                 "Jalpaiguri",
+                 "Kalimpong",
+                 "Kolkata",
+                 "Malda",
+                 "Murshidabad",
+                 "Nadia",
+                 "North 24 Parganas",
+                 "Paschim Medinipur (West Medinipur)",
+                 "Purba Medinipur (East Medinipur)",
+                 "Purulia",
+                 "South 24 Parganas",
+                 "Uttar Dinajpur (North Dinajpur)"
+        ]
+        },
+    "Australia": {
+    "South Australia": ["Dunstan", "Mitchell"],
+    "Victoria": ["Altona", "Euroa"]
+    }, "Canada": {
+    "Alberta": ["Acadia", "Bighorn"],
+    "Columbia": ["Washington", ""]
+    },
+    }
+    window.onload = function () {
+    var countySel = document.getElementById("countySel"),
+    stateSel = document.getElementById("stateSel"),
+    districtSel = document.getElementById("districtSel");
+    for (var country in stateObject) {
+    countySel.options[countySel.options.length] = new Option(country, country);
+    }
+    countySel.onchange = function () {
+    stateSel.length = 1; // remove all options bar first
+    districtSel.length = 1; // remove all options bar first
+    if (this.selectedIndex < 1) return; // done 
+    for (var state in stateObject[this.value]) {
+    stateSel.options[stateSel.options.length] = new Option(state, state);
+    }
+    }
+    countySel.onchange(); // reset in case page is reloaded
+    stateSel.onchange = function () {
+    districtSel.length = 1; // remove all options bar first
+    if (this.selectedIndex < 1) return; // done 
+    var district = stateObject[countySel.value][this.value];
+    for (var i = 0; i < district.length; i++) {
+    districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+    }
+    }
+    }
+</script>
 
