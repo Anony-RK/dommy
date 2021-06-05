@@ -1,0 +1,2241 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>SFS | Customer</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+    <link href="/components/_mod/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+<link href="/components/_mod/jquery-ui.custom/jquery-ui.custom.css" rel="stylesheet"/>
+<link href="/assets/css/bootstrap.css" rel="stylesheet"/>
+<link href="/components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+<link href="/assets/css/ace-fonts.css" rel="stylesheet"/>
+<link href="/assets/css/ace-part2.css" rel="stylesheet"/>
+<link href="/assets/css/ace-skins.css" rel="stylesheet"/>
+<link href="/assets/css/ace-rtl.css" rel="stylesheet"/>
+<link href="/components/chosen/chosen.css" rel="stylesheet"/>
+<link href="/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet"/>
+<link href="/components/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet"/>
+<link href="/components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
+<link href="/components/tableExport/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="/components/tableExport/buttons.dataTables.min.css" rel="stylesheet"/>
+<link href="/components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+<link href="/components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" rel="stylesheet"/>
+<link href="/components/ToastMessage/jquery.toastmessage.css" rel="stylesheet"/>
+<link href="/components/select2/dist/css/select2.css" rel="stylesheet"/>
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+
+    <script src="/assets/js/ace-extra.js"></script>
+
+
+
+
+
+</head>
+
+<body class="skin-1">
+    <!-- #section:basics/navbar.layout -->
+    <div id="navbar" class="navbar navbar-default          ace-save-state">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <!-- #section:basics/sidebar.mobile.toggle -->
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- /section:basics/sidebar.mobile.toggle -->
+            <div class="navbar-header pull-left">
+                <!-- #section:basics/navbar.layout.brand -->
+                <a href="#" class="navbar-brand">
+                    <small class="bolder">
+                        <img src="/assets/images/SFS logo.png" alt="" style="height:25px;width:25px" id="Logo" />
+                        SFS | SFS EQUIPMENTS PVT. LTD.  | Financial Year: 2017-2018
+                    </small>
+
+                </a>
+
+                <!-- /section:basics/navbar.layout.brand -->
+                <!-- #section:basics/navbar.toggle -->
+                <!-- /section:basics/navbar.toggle -->
+            </div>
+            
+<form action="/Account/LogOff" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="SoxP7efoQ_TCFi8At_MWElYX5ODRxwg7p1n6Xe71lq6_BMGMonpapzthxROt15VdQ44I5-TNVOiZzKHjbmUP7R9FdK0aqJR4cfnS4JecB47qrzivK2tq6lvMGx33XgWxlqsTZ3L4Q42wUa4DByo4KQ2" />    <div class="navbar-buttons navbar-header pull-right" role="navigation">
+        <ul class="nav ace-nav">
+          
+
+            <!-- #section:basics/navbar.user_menu -->
+            <li class="light-blue dropdown-modal">
+                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                    <img class="nav-user-photo" src="../assets/avatars/sai_baba.jpg" alt="Jason's Photo" />
+                    <span class="user-info">
+                        <small>Welcome,</small>
+                        Surendar Durai
+                    </span>
+
+                    <i class="ace-icon fa fa-caret-down"></i>
+                </a>
+
+                <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                    <li>
+                        <a href="/Manage/Settings">
+                            <i class="ace-icon fa fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/User/UserProfile">
+                            <i class="ace-icon fa fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">
+                            <i class="ace-icon fa fa-power-off"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- /section:basics/navbar.user_menu -->
+        </ul>
+    </div>
+</form>
+            <!-- #section:basics/navbar.dropdown -->
+            <!-- /section:basics/navbar.dropdown -->
+        </div><!-- /.navbar-container -->
+    </div>
+
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container ace-save-state" id="main-container">
+        <script type="text/javascript">
+			try { ace.settings.loadState('main-container') } catch (e) { }
+        </script>
+
+        <!-- #section:basics/sidebar -->
+        <div id="sidebar" class="sidebar responsive                    ace-save-state">
+            <script type="text/javascript">
+				try { ace.settings.loadState('sidebar') } catch (e) { }
+            </script>
+
+
+            <ul class="nav nav-list">
+                    <li class="active">
+                        <a href="/Home/Index">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text"> Dashboard </span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text"> Administration </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/Administration/EditCompany">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Company Creation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Administration/CompanyBranch">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Branch Creation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Administration/ConfigurationSetting">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Configuration Setting
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/User/ManageUsers">
+                                    <i class="menu-icon fa fa-list"></i>
+                                    <span class="menu-text"> Manage Users </span>
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/HR/RelivingApprovalDirector">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Employee Exit Approval by Director
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text"> Master </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="/Vendor/Vendor">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Import Vendor Creation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Vendor/LocalVendor">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Local Vendor Creation
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/CustomerCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Customer Creation
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/CustomerBranchCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Customer Branch List
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/BankMaster">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bank Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/DSCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Depreciation Schedule
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/TaxMaster">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tax Master
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/ItemCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Spare Creation
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/MHEItemCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    MHE Creation
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/FinanceCreation">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Finance Creation
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Master/RentalTerms">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Rental Terms
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="">
+                                <a href="/Master/SaleWarentyPolicy">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sale Warenty Policy
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+                                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text">  Profit Allocation </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                           
+                            <li class="">
+                                <a href="/Inventory/ProfitCenter">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Profit Allocation for Spares
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="/Inventory/LandingCost">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Equipment  Landing Cost
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+                <li class="">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="menu-icon fa fa-user"></i>
+                        <span class="menu-text"> Inventory </span>
+
+                        <b class="arrow fa fa-angle-down"></b>
+                    </a>
+
+                    <b class="arrow"></b>
+
+                    <ul class="submenu">
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-user"></i>
+                                    <span class="menu-text"> MHE </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                        <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text"> MHE-Purchase Order </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                
+                                        <li class="">
+                                            <a href="/Inventory/MHEPurchaseOrder">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Creation
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                                <li class="">
+                                            <a href="/Inventory/MHEPurchaseOrderList">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                List
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                                <li class="">
+                                            <a href="/Inventory/MHEPurchaseOrderApproval">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Purchase Order Approval
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                    </ul>
+                                </li>
+                                                                            <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text">  MHE Goods Receiving Note </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                        <li class="">
+                                            <a href="/Inventory/MHEGoodsReceivingNote">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Creation
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                                        <li class="">
+                                            <a href="/Inventory/MHEGRNPendingList">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                GRN waiting for approval
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="/Inventory/MHEStockNumbering">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                MHE  Stock Numbering
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                        <li class="">
+                                            <a href="/Inventory/MHEClassification">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                MHE  Classification
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                        <li class="">
+                                            <a href="/Inventory/MHEOpeningStockNumbering">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                MHE Opening Stock Numbering
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                        <li class="">
+                                            <a href="/Inventory/MHEOpeningClassification">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                MHE Opening Stock Classification
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                </ul>
+                            </li>
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa-user"></i>
+                                <span class="menu-text"> Spares </span>
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+
+                            <b class="arrow"></b>
+
+                            <ul class="submenu">
+                                    <li class="">
+                                        <a href="#" class="dropdown-toggle">
+                                            <i class="menu-icon fa fa-user"></i>
+                                            <span class="menu-text"> Purchase Order </span>
+                                            <b class="arrow fa fa-angle-down"></b>
+                                        </a>
+
+                                        <b class="arrow"></b>
+
+                                        <ul class="submenu">
+                                            
+                                <li class="">
+                                    <a href="/Inventory/PurchaseOrder">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Creation
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                                                            <li class="">
+                                    <a href="/Inventory/PurchaseOrderList">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        List
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                                                            <li class="">
+                                    <a href="/Inventory/PurchaseOrderApproval">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Purchase Order Approval
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                        </ul>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="#" class="dropdown-toggle">
+                                            <i class="menu-icon fa fa-user"></i>
+                                            <span class="menu-text">   Goods Receiving Note </span>
+                                            <b class="arrow fa fa-angle-down"></b>
+                                        </a>
+
+                                        <b class="arrow"></b>
+
+                                        <ul class="submenu">
+                                <li class="">
+                                    <a href="/Inventory/GoodsReceivingNote">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Creation
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                                                            <li class="">
+                                    <a href="/Inventory/GRNPendingList">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        GRN waiting for approval
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                        </ul>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/Inventory/StockNumbering">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Stock Numbering
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+
+                                    <li class="">
+                                        <a href="/Inventory/IndentInventory">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Indent Inventory
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/Billing/StockStatement">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Stock Movement
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="#" class="dropdown-toggle">
+                                            <i class="menu-icon fa fa-warning"></i>
+                                            <span class="menu-text"> Damage and Expiry </span>
+                                            <b class="arrow fa fa-angle-down"></b>
+                                        </a>
+
+                                        <b class="arrow"></b>
+
+                                        <ul class="submenu">
+                                                <li class="">
+                                                    <a href="/Inventory/DamageandExpiry">
+                                                        <i class="menu-icon fa fa-caret-right"></i>
+                                                        Creation
+                                                    </a>
+                                                    <b class="arrow"></b>
+                                                </li>
+                                                                                            <li class="">
+                                                    <a href="/Inventory/DamageandExpiryList">
+                                                        <i class="menu-icon fa fa-caret-right"></i>
+                                                        Open List
+                                                    </a>
+                                                    <b class="arrow"></b>
+                                                </li>
+                                                                                            <li class="">
+                                                    <a href="/Inventory/ClosedDamageandExpiryList">
+                                                        <i class="menu-icon fa fa-caret-right"></i>
+                                                        Closed List
+                                                    </a>
+                                                    <b class="arrow"></b>
+                                                </li>
+
+                                        </ul>
+                                    </li>
+                                <li class="">
+                                    <a href="/Inventory/ReportSale">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Sale/Purchase List
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-list-ul"></i>
+                                    <span class="menu-text"> Maintenance </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="/Inventory/MHECheckList">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            MHE - Daily Check List
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                    <li class="">
+                                        <a href="/Inventory/MHEPrvenitveShedule">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            PM - Shedule
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                    <li class="">
+                                        <a href="/Inventory/MHEPreventiveCheckList">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            PM - Check List
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                </ul>
+                            </li>
+                                                    <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-list-ul"></i>
+                                    <span class="menu-text"> Production </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                        <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text">   Work Order </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                    <li class="">
+                                                        <a href="/Inventory/WorkOrder">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Work Order Creation
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="/Inventory/WorkOrderBasedQO">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Work Order Creation (Based on QO)
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Inventory/OpenedWorkOrderList">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Work Order List
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Inventory/WorkOrderApproval">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            QC Order Approval
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                            </ul>
+
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Inventory/IndentProduction">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Indent Production
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Inventory/ReturntoInventory">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Return to Inventory
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                </ul>
+                            </li>
+                                                    <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-list-ul"></i>
+                                    <span class="menu-text"> Billing </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                        <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text"> Equipment </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                
+                                                    <li class="">
+                                                        <a href="/Billing/EquipSaleQuationOrder">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Quotation Order(Without WO)
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Billing/EquipmentSalePrint">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Equipment Quotation Print(Without WO)
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Billing/BillingSale">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Billing Sale
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Billing/BillingSaleList">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Billing Sale Print
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text"> Spares </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                    <li class="">
+                                                        <a href="/Billing/SpareSaleOrder">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Spare Parts Quotation Order
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Billing/SpareSaleOrderList">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Spare Quotation Order Print
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+
+                                                    <li class="">
+                                                        <a href="/Billing/SpareBilling">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Billing Spare Sale
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+
+                                                    <li class="">
+                                                        <a href="/Billing/SpareBillingSaleList">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Spare Billing Sale Print
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                            </ul>
+                                        </li>
+
+
+                                        <li class="">
+                                            <a href="/Billing/StockOutwardPrint">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Stock Outward print
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                </ul>
+                            </li>
+                                                    <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-list-ul"></i>
+                                    <span class="menu-text"> Finance </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                        <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text"> Finance Entry </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                    <li class="">
+                                                        <a href="/Finance/FinanceEntry">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Cash Income
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Finance/FinanceBankReceipt">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Bank Income
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Finance/FinanceCashPayment">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Cash Payment
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Finance/FinanceBankPayment">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Bank Payment
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Finance/FinanceJournal">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Journal
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Finance/FinanceContra">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            Contra
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                <li class="">
+                                                    <a href="/Inventory/DebitorCreditnote">
+                                                        <i class="menu-icon fa fa-caret-right"></i>
+                                                        Debit or Credit note
+                                                    </a>
+                                                    <b class="arrow"></b>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/LedgerView">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Ledger View
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/TrialBalanceView">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                TrialBalance View
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/VoucherPrint">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Multiple Voucher Print
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/CostCenterAnalysis">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Cost Centre Analysis
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/DayBook">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Day Book
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/BRS">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                BRS
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/Finance/CashPaymentApproval">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Cash Limit Approval
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="#" class="dropdown-toggle">
+                                                <i class="menu-icon fa fa-user"></i>
+                                                <span class="menu-text"> GSTR </span>
+                                                <b class="arrow fa fa-angle-down"></b>
+                                            </a>
+
+                                            <b class="arrow"></b>
+
+                                            <ul class="submenu">
+                                                    <li class="">
+                                                        <a href="/Inventory/GSTR1">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            GSTR1
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Inventory/GSTR2">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            GSTR2
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                                                                                    <li class="">
+                                                        <a href="/Inventory/GSTR3">
+                                                            <i class="menu-icon fa fa-caret-right"></i>
+                                                            GSTR3
+                                                        </a>
+                                                        <b class="arrow"></b>
+                                                    </li>
+                                            </ul>
+
+                                        </li>
+
+
+
+                                </ul>
+
+
+                            </li>
+                                                    <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-shopping-cart"></i>
+                                    <span class="menu-text"> Fixed Assets </span>
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                        <li class="">
+                                            <a href="/PurchaseAsset/AssetsRequestForm">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Assets Request Form
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/AssetReqestList">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Assets Request List
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/AssetRequestApproval">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Assets Approval
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/PurchaseOrderAssets">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                PO-Assets Create
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/PurchaseOrderAssetList">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                PO-Assets Print
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/PurchaseAssetsCreate">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Purchase Entry
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/DamageSale">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Damage or Sale
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/PhysicalVerification">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                Physical Verification
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                                                            <li class="">
+                                            <a href="/PurchaseAsset/FARegister">
+                                                <i class="menu-icon fa fa-caret-right"></i>
+                                                FA Register
+                                            </a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                    <li class="">
+                                        <a href="/PurchaseAsset/DepreciationReport">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Depreciation Report
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa-shopping-cart"></i>
+                                <span class="menu-text"> Financial Statement </span>
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+                            <b class="arrow"></b>
+
+                            <ul class="submenu">
+                                    <li class="">
+                                        <a href="/FinancialStatement/BillsPayble">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Bills Payable
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/FinancialStatement/BillsReceivable">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Bills Receivable
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                <li class="">
+                                    <a href="/ScheduleGroup/ScheduleGroupCreation">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Scheduling Group
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Finance/NoteWise">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Balance Sheet
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+                                
+
+                                <li class="">
+                                    <a href="/Finance/UnMappedLedger">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Unmapped Ledger
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa-calendar"></i>
+                                <span class="menu-text"> Attendance </span>
+
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+
+                            <b class="arrow"></b>
+
+                            <ul class="submenu">
+
+                                <li class="">
+                                    <a href="/HR/StaffAttendanceUpload">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Upload Attendance
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+
+
+                                <li class="">
+                                    <a href="/HR/StaffAttendanceStaffwiseReport">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Staff wise Report
+                                    </a>
+
+                                    <b class="arrow"></b>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa fa-user"></i>
+                                <span class="menu-text"> HR  </span>
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+                            <b class="arrow"></b>
+
+                            <ul class="submenu">
+
+                                
+                                <li class="">
+                                    <a href="/HR/NewJoineeSelection">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Requirement New
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+                                <li class="">
+                                    <a href="/HR/NewJoineeCreation">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        New Joinee Creation
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+
+
+                                    <li class="">
+                                        <a href="/HR/LeaveRequestApproval">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Leave approval
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                <li class="">
+                                    <a href="/HR/WeekOffApply">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        WeekOff Apply
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/HR/PaySlip">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Pay slip
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/HR/BranchTransfer">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Branch Transfer
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                    <li class="">
+                                        <a href="/HR/LoansAdvanceApproval">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Loan approval
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                <li class="">
+                                    <a href="/HR/PayRollSheet">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Payroll Sheet
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/HR/RelivingApprovaHR">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Employee Exit Approval
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                
+
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="menu-icon fa fa fa-user"></i>
+                                <span class="menu-text"> MIS  </span>
+                                <b class="arrow fa fa-angle-down"></b>
+                            </a>
+                            <b class="arrow"></b>
+
+                            <ul class="submenu">
+
+
+                                <li class="">
+                                    <a href="/Report/SalesInvoiceReport">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                     Invoice Report
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/PurchaseInvoiceReport">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Purchase Invoice Report
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/TurnOverReport">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Turn Over Report
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/BillsPayble">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Payable
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/BillsReceivable">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                         Receivable
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/BankLonaPayment">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Bank Loan Payment
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+                                <li class="">
+                                    <a href="/Report/BankLoanReport">
+                                        <i class="menu-icon fa fa-caret-right"></i>
+                                        Bank Loan Statement
+                                    </a>
+                                    <b class="arrow"></b>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul><!-- /.nav-list -->
+                    <!-- #section:basics/sidebar.layout.minimize -->
+                    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                        <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                    </div>
+
+                    <!-- /section:basics/sidebar.layout.minimize -->
+</div>
+
+        <!-- /section:basics/sidebar -->
+        <div class="main-content">
+            <div class="main-content-inner">
+                                <!-- /section:basics/content.breadcrumbs -->
+                <div class="page-content">
+
+
+                    
+
+<div class="main-content-inner">
+
+    <div class="row" id="CustomerDetail" hidden>
+        <div class="col-sm-12">
+<form action="/Master/CustomerForm" class="form-horizontal" id="CustomerForm" method="post" name="CustomerForm" role="form"> <div id="accordion" class="accordion-style1 panel-group">
+
+                <h4 class="">
+
+                    Customer Creation
+
+                </h4>
+                
+            </div>
+            <div class="col-md-12">
+
+                <div id="accordion" class="accordion-style1 panel-group">
+                    <div class="panel panel-default comp-panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle comp-panel" style="color:white;" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="ace-icon" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                                    Customer Info
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in" id="collapseOne">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="0" />
+                                    <input id="CreatedBy" name="CreatedBy" type="hidden" value="surendar.durai2013@gmail.com" />
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Customer Code<span style="color:red">*</span></label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field tbMandatoryFields" id="CustomerCode" name="CustomerCode" readonly="readonly" type="text" value="CHN50" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left  bolder" for="password">Type of Customer</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input id="TypeofCustomer" name="TypeofCustomer" type="hidden" value="" />
+                                                            <select class="form-control chosen-select comp-field " id="TypeofCustomerMul" multiple="multiple" name="TypeofCustomer"><option value="Machine sale">Machine sale</option>
+<option value="Spare parts sale">Spare parts sale</option>
+<option value="Rental for Machine">Rental for Machine</option>
+<option value="Rental for Spare parts">Rental for Spare parts</option>
+</select>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left  bolder" for="password">Customer Name<span style="color:red">*</span></label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field tbMandatoryFields" id="CustomerName" name="CustomerName" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Address1</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field" id="Address1" name="Address1" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Address2</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field" id="Address2" name="Address2" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Pin Code</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field digits input-mask-pincode" data-val="true" data-val-number="The field Pincode must be a number." id="Pincode" name="Pincode" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">State </label>
+                                                        <div class="col-xs-12 col-sm-8">
+
+                                                            <select class="form-control chosen-select comp-field " id="State" name="State"><option value="">Select a State...</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam ">Assam </option>
+<option value="Bihar ">Bihar </option>
+<option value="Chandigarh ">Chandigarh </option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Mail_ID</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field MailId" id="MailId" name="MailId" type="text" value="" />
+
+                                                            <span id="error" style="display:none;color:red;">Email is not valid</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Contact Person</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field " id="ContactPerson" name="ContactPerson" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Contact Number</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <span class="input-icon input-icon-right ">
+                                                                <input class="comp-field digits" id="ContactNumber" maxlength="15" name="ContactNumber" type="text" value="" />
+                                                                <i class="ace-icon fa fa-phone fa-flip-horizontal"></i>
+                                                            </span>
+                                                            <div hidden id="ph" style="color:red">This field is required</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">GST NO</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field " id="GSTNO" name="GSTNO" type="text" value="" />
+                                                            <label id="lblGST" class="red" hidden>GST Identification Number is not valid. It should be in this "29AAMCS9035Q1ZA" format</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password">Is Branch Available</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <select class="form-control chosen-select comp-field " id="IsBranchAvailable" name="IsBranchAvailable"><option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button hidden type="button" id="View" class="btn btn-info btn-default">
+                                                                View
+                                                            </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default comp-panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle comp-panel" style="color:white;" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="ace-icon " data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                                    Financial Info
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in" id="collapseTwo">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left  bolder" for="password">Sub Group<span style="color:red">*</span></label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <select class="form-control comp-field chosen-select choMandatoryFields" data-val="true" data-val-number="The field Sub_Group must be a number." data-val-required="The Sub_Group field is required." id="Sub_Group" name="Sub_Group"><option value="">Select a Account Group...</option>
+<option value="11">Reserve &amp; Surplus</option>
+<option value="12">Sundry Creditors</option>
+<option value="13">Loans ( Liability)</option>
+<option value="14">Bank OD</option>
+<option value="15">Opening Stock</option>
+<option value="16">Cash-in-hand</option>
+<option value="17">Bank Accounts</option>
+<option value="18">Investments</option>
+<option value="19">Loans and Advances</option>
+<option value="20">Books ( for Students)</option>
+<option value="21">Books ( for Library )</option>
+<option value="22">Printing &amp; stationery</option>
+<option value="23">School Fees</option>
+<option value="24">Staff Salary</option>
+<option value="1007">Sundry Debtors </option>
+<option value="1009">Sales tax payable</option>
+<option value="1011">checking</option>
+<option value="1013">Test1</option>
+<option value="1014">test2</option>
+<option value="1015">Test3</option>
+<option value="1016">Test5</option>
+</select>
+                                                            <div class="Mandatory1" hidden style="color:red">This is required field</div>
+                                                        </div>
+                                                     
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left  bolder" for="password">Group</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field" id="Group" name="Group" readonly="readonly" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left  bolder" for="password">Ledger Name</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input class="form-control comp-field" id="LedgerName" name="LedgerName" readonly="True" type="text" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password"></label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <input type="checkbox" id="isCostCostCenter" name="isCostCenterYesNo" class="ace ace-checkbox-2" />
+                                                            <label class="lbl" for="ace-settings-navbar"> Cost Center</label>
+                                                            <input id="CostCenterYesNo" name="CostCenterYesNo" type="hidden" value="" />
+                                                            &nbsp;<input type="checkbox" id="isInventoryYesNo" name="isInventoryYesNo" class="ace ace-checkbox-2" />
+                                                            <label class="lbl" for="ace-settings-navbar"> Inventory</label>
+                                                            <input id="InventoryYesNo" name="InventoryYesNo" type="hidden" value="" />
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+                <div class="clearfix form-actions comp-panel" style="color:white">
+                    <div class="col-md-6" style="text-align:left">
+                        <div id="BIButton">
+                            <button id="Download" class="btn btn-info btn-default" type="button">
+                                <i class="ace-icon fa fa-download"></i>
+                                Download
+                            </button>
+                            <button id="Upload" class="btn btn-info btn-default" type="button" onclick="javascript:customerbulkimport_Window();">
+                                <i class="ace-icon fa fa-upload"></i>
+                                Upload
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="text-align:right">
+                        <button id="CancelCustomerBtn" class="btn btn-info btn-default" type="button">
+                            <i class="ace-icon fa fa-cancel"></i>
+                            Cancel
+                        </button>
+                        <button id="saveCustomerBtn" class="btn btn-info btn-default" type="button">
+                            <i class="ace-icon fa fa-check"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
+</form>        </div>
+    </div>
+    <div class="row" id="CustomerList">
+
+        <div class="col-xs-12">
+
+            <button type="button" class="btn-primary" onclick="GetNewCustomer();">
+                <span class="white">
+                    <i class="fa fa-plus bigger-120" title="Add New Student"></i>
+                </span>
+                Add New Customer
+            </button>
+            <br />
+            <br />
+            <div class="table-header comp-panel">
+                Customer's List
+            </div>
+            <div style="width: 99%; overflow-x: auto;">
+                <table id="Customertablelist" class="table table-striped table-bordered table-hover">
+                    <thead style="background-color:#3b6589;">
+                        <tr>
+                            <td style="font-weight:lighter; color:white; background-color:#3b6589;">Customer ID</td>
+                            <td style="font-weight:lighter; color:white; background-color:#3b6589;">Customer Name</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">Address</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">State</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">Contact Person</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">Contact NO</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">E-Mail Id</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">GST</td>
+                            <td style="font-weight:lighter;color:white; background-color:#3b6589;">Actions</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="BulkUploadModal"></div>
+<link href="/assets/css/SFS.css" rel="stylesheet" />
+<div id="ProductCategoryAddModal"></div>
+
+
+                </div><!-- /.page-content -->
+            </div>
+        </div><!-- /.main-content -->
+
+        
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+    
+    <script type="text/javascript">
+		window.SFS = window.SAS || {};
+		window.SFS.ClientTimeout = 15;
+    </script>
+
+    <script src="/components/jquery/dist/jquery.js"></script>
+
+
+    <script type="text/javascript">
+		if ('ontouchstart' in document.documentElement) document.write("<script src='../components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'>" + "<" + "/script>");
+    </script>
+
+    <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="/components/jquery-ui/jquery-ui.js"></script>
+
+    <script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script src="/Scripts/SFS/SFS.Alert.js"></script>
+<script src="/Scripts/SFS/SFS.js"></script>
+
+    <script src="/components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
+<script src="/components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
+<script src="/components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="/components/_mod/easypiechart/jquery.easypiechart.js"></script>
+<script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+<script src="/components/_mod/datatables/jquery.dataTables.bootstrap.js"></script>
+<script src="/components/datatables.net-buttons/js/dataTables.buttons.js"></script>
+<script src="/components/datatables.net-buttons/js/buttons.flash.js"></script>
+<script src="/components/datatables.net-buttons/js/buttons.html5.js"></script>
+<script src="/components/datatables.net-buttons/js/buttons.print.js"></script>
+<script src="/components/datatables.net-buttons/js/buttons.colVis.js"></script>
+<script src="/components/datatables.net-select/js/dataTables.select.js"></script>
+<script src="/components/jquery.sparkline/index.js"></script>
+<script src="/components/jquery-validation/dist/additional-methods.js"></script>
+<script src="/components/bootbox.js/bootbox.js"></script>
+<script src="/components/select2/dist/js/select2.js"></script>
+<script src="/components/Flot/jquery.flot.js"></script>
+<script src="/components/Flot/jquery.flot.pie.js"></script>
+<script src="/components/Flot/jquery.flot.resize.js"></script>
+<script src="/components/chosen/chosen.jquery.js"></script>
+<script src="/components/fuelux/js/spinbox.js"></script>
+<script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+<script src="/components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script src="/components/moment/moment.js"></script>
+<script src="/components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+<script src="/components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+<script src="/components/jquery-knob/js/jquery.knob.js"></script>
+<script src="/components/autosize/dist/autosize.js"></script>
+<script src="/components/jquery-inputlimiter/jquery.inputlimiter.js"></script>
+<script src="/components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+<script src="/components/_mod/bootstrap-tag/bootstrap-tag.js"></script>
+
+    <script src="/assets/js/src/elements.scroller.js"></script>
+<script src="/assets/js/src/elements.colorpicker.js"></script>
+<script src="/assets/js/src/elements.fileinput.js"></script>
+<script src="/assets/js/src/elements.typeahead.js"></script>
+<script src="/assets/js/src/elements.wysiwyg.js"></script>
+<script src="/assets/js/src/elements.spinner.js"></script>
+<script src="/assets/js/src/elements.treeview.js"></script>
+<script src="/assets/js/src/elements.wizard.js"></script>
+<script src="/assets/js/src/elements.aside.js"></script>
+<script src="/assets/js/src/ace.js"></script>
+<script src="/assets/js/src/ace.basics.js"></script>
+<script src="/assets/js/src/ace.scrolltop.js"></script>
+<script src="/assets/js/src/ace.ajax-content.js"></script>
+<script src="/assets/js/src/ace.touch-drag.js"></script>
+<script src="/assets/js/src/ace.sidebar.js"></script>
+<script src="/assets/js/src/ace.sidebar-scroll-1.js"></script>
+<script src="/assets/js/src/ace.submenu-hover.js"></script>
+<script src="/assets/js/src/ace.widget-box.js"></script>
+<script src="/assets/js/src/ace.settings.js"></script>
+<script src="/assets/js/src/ace.settings-rtl.js"></script>
+<script src="/assets/js/src/ace.settings-skin.js"></script>
+<script src="/assets/js/src/ace.widget-on-reload.js"></script>
+<script src="/assets/js/src/ace.searchbox-autocomplete.js"></script>
+
+    <script src="/components/tableExport/jquery.dataTables.min.js"></script>
+<script src="/components/tableExport/dataTables.buttons.min.js"></script>
+<script src="/components/tableExport/buttons.flash.min.js"></script>
+<script src="/components/tableExport/jszip.min.js"></script>
+<script src="/components/tableExport/pdfmake.min.js"></script>
+<script src="/components/tableExport/vfs_fonts.js"></script>
+<script src="/components/tableExport/buttons.html5.min.js"></script>
+<script src="/components/tableExport/buttons.colVis.min.js"></script>
+<script src="/components/tableExport/buttons.print.min.js"></script>
+
+    <script src="/components/ToastMessage/jquery.toastmessage.js"></script>
+
+    
+    
+    <script type="text/javascript" src="/Scripts/Areas/Master/Customer.js"></script>
+    <script type="text/javascript">
+       
+        function CustomerBranch_Window(Id) {
+            window.TempProductCategoryUrl ="../Master/PartialCustomerBranch/" + Id;
+            var title1 = 'customer Branch List';
+            var url = window.TempProductCategoryUrl;
+            $("#ProductCategoryAddModal").dialog({
+                autoOpen: true,
+                position: { my: "center", at: "top+250" },
+
+                width: 300,
+                resizable: false,
+
+                title_html: true,
+                modal: true,
+                open: function () {
+                    $(this).load(url);
+                },
+                close: function () {
+                    //DropDownProductCategory();
+                }
+            }).dialog('widget').find('.ui-dialog-title').html("<div class='widget-header widget-header-small'><h4 class='smaller'><i class='ace-icon fa fa-floppy-o'></i> " + title1 + " </h4></div>");
+            return false;
+        } window.jQuery || document.write("<script src='../assets/js/jquery.js'>" + "<" + "/script>");
+        $(document).ready(function () {
+            $("#View").hide();
+            var message = '';
+            var status = '';
+
+            if (message != null && message != '') {
+                SFS.Alert(message, status);
+            }
+
+            //var StockCategoryListArray = [];
+            ////------------Multiple
+            //$('#TypeofCustomerMul').on('change', function (evt, params) {
+            //    var selectedValue = params.selected;
+
+            //    var deselectedvalue = params.deselected;
+            //    // alert(deselectedvalue);
+            //    if (selectedValue != "" && selectedValue != null && selectedValue != 0) {
+            //        StockCategoryListArray.push(selectedValue);
+            //    }
+            //    if (deselectedvalue != "" && deselectedvalue != null && deselectedvalue != 0) {
+            //        StockCategoryListArray.pop(deselectedvalue);
+            //    }
+            //    //StockCategoryListArray.push(selectedValue);
+
+            //});
+            $("#BIButton").hide();
+            //---------For Bulk Import------//
+            window.CustomerbulkuploadUrl = "/Master/CusBulkUpload";
+            $("#Download").click(function () {
+                $.ajax(
+                {
+                    url: '/Master/CustomerDownLoadExcelFile',
+                    contentType: 'application/json; charset=utf-8',
+                    datatype: 'json',
+                    type: "GET",
+                    success: function () {
+                        window.location = '/Master/CustomerDownLoadExcelFile';
+                    }
+                });
+
+            });
+            //--------End---------//
+            //------Validation-Duplication---------------//
+            $("#CustomerName").focusout(function () {
+                $.getJSON("/Master/CheckCustomerName", { CustomerName: $(this).val(), Id: $("#Id").val() }, function (data) {
+                    if (data.isDuplicate) {
+                        SFS.Alert("That Customer name is already used.", "notice");
+                        $("#CustomerName").val('');
+                        $("#CustomerName").focus();
+                    }
+
+
+                });
+            });
+            $('#customername').keyup(function (e) {
+
+                $('#ledgername').val($('#customername').val());
+
+            });
+            $('#GSTNO').keyup(function () {
+                this.value = this.value.toUpperCase();
+            });
+            function GSTCheck() {
+                var regex2 = /^([0-9]){2}([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}([0-9]){1}([a-zA-Z]){1}([a-zA-Z0-9]){1}?$/; //this is the pattern of GST No expersion
+                var a = document.getElementById('gstno').value;
+                if (a != null && a != "") {
+                    if (regex2.test(a) == false) {
+                        $("#lblGST").show();
+                        $("#GSTNO").val('');
+                        return false;
+                    }
+                    else {
+                        $("#lblGST").hide();
+                    }
+                }
+            }
+            $("#GSTNO").blur(function () {
+                GSTCheck();
+            });
+            $('.input-mask-phonenoCODE').mask('999');
+            $('.input-mask-phoneno').mask('9999999999');
+            $('.input-mask-pincode').mask('999999');
+            $('#Sub_Group').change(function () {
+                var stid = $("#Sub_Group :selected").val();
+
+                if (stid != "") {
+                    $.ajax({
+                        url: "../Master/Groupload",
+                        type: "POST",
+                        data: { SubGP: stid },
+                        async: true,
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.Success) {
+                                $("#Group").val(data.grp);
+                                $("#LedgerName").val($("#CustomerName").val());
+                            }
+                            else {
+                                SFS.Alert("Failed to load the Details", "danger");
+                            }
+                        },
+                        error: function (request, status, error) {
+                            SFS.Alert("Failed to load the Details", "danger");
+                        }
+                    });
+                }
+            });
+            $("#ph").hide();
+            //$("#ContactNumber").blur(function () {
+            //    var name = $(this).val();
+            //    if (name.length == 0) {
+            //        $("#ph").show();
+            //    }
+            //    else {
+            //        $("#ph").hide();
+            //        return true;
+            //    }
+            //});
+            $('#View').click(function () {
+                CustomerBranch_Window($("#Id").val());
+            });
+            $('#isInventoryYesNo').click(function () {
+                var inven = $('#isInventoryYesNo:checked').val();
+                if (inven != undefined) {
+                    $("#InventoryYesNo").val('true');
+                }
+                else {
+                    $("#InventoryYesNo").val('false');
+                }
+            });
+
+            $('#isCostCenterYesNo').click(function () {
+                var cost = $('#isCostCenterYesNo:checked').val();
+                if (cost != undefined) {
+                    $("#CostCenterYesNo").val('true');
+                }
+                else {
+                    $("#CostCenterYesNo").val('false');
+                }
+            });
+            $('.MailId').keypress(function (e) {
+                $('#error').hide();
+                if (this.value != "") {
+                    var re = /([A-Z0-9a-z_-][^])+?[^$#<>?]+?\.[\w]{2,4}/.test(this.value);
+                    if (!re) {
+                        $('#error').show();
+                    } else {
+                        $('#error').hide();
+                    }
+                }
+            });
+            $('.MailId').focusout(function (e) {
+                $('#error').hide();
+                if (this.value != "") {
+                    var re = /([A-Z0-9a-z_-][^])+?[^$#<>?]+?\.[\w]{2,4}/.test(this.value);
+                    if (!re) {
+                        $('.MailId').val('');
+                        $('#error').show();
+                        // $('.MailId').focus();
+                    } else {
+                        $('#error').hide();
+                    }
+                }
+            });
+            $('.digits').keypress(function (e) {
+                var regex = new RegExp("^[0-9]+$");
+                var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(str)) {
+                    return true;
+                }
+
+                e.preventDefault();
+                return false;
+            });
+            $(".tbMandatoryFields").blur(function () {
+                var name = $(this).val();
+                if (name.length == 0) {
+                    //$(this).css('border-color', 'red');
+                    $(this).next(".Mandatory").remove();
+                    $(this).siblings('<div class="Mandatory" style="color:red">This is required field</div>');
+                }
+                else {
+                    //$(this).css('border-color', 'black');
+                    $(this).next(".Mandatory " ).remove();
+                    return true;
+                }
+            });
+            $(".choMandatoryFields").change(function () {
+
+                var name = $(this).val();
+                if (name.length == 0 || name == null || name=="") {
+                    //$(this).css('border-color', 'red');
+
+                    $(this).closest("div").find(".Mandatory1").show();
+                    //$("#Mandatory1").show();
+
+                   // $(this).after('<div class="Mandatory" style="color:red">This is required field</div>');
+                }
+                else {
+
+                    //$(this).css('border-color', 'black');
+                    $(this).closest("div").find(".Mandatory1").hide();
+                    //$("#Mandatory1").hide();
+
+                    return true;
+                }
+            });
+        $("#CustomerDetail").hide();
+        $("#CustomerList").show();
+        $('#CancelCustomerBtn').click(function (e) {
+            $("#CustomerDetail").hide();
+            $("#CustomerList").show();
+        });
+        $('#saveCustomerBtn').click(function (e) {
+            $("#saveCustomerBtn").prop('disabled', true);
+            var StockCategoryListArray = [];
+
+            $("#TypeofCustomerMul").each(function () {
+
+                if ($(this).val() != null && $(this).val() != "") {
+
+                    StockCategoryListArray.push($(this).val());
+
+                }
+            });
+            $("#TypeofCustomer").val(StockCategoryListArray);
+           
+            var isValid = true;
+            $(".tbMandatoryFields").each(function () {
+                var name = $(this).val();
+
+                   if (name.length == 0||name==null) {
+
+                    $(this).next(".Mandatory").remove();
+                    $(this).after('<div class="Mandatory" style="color:red">This is required field</div>');
+                    isValid = false;
+                }
+                else {
+                    //$(this).css('border-color', 'black');
+                    $(this).next(".Mandatory").remove();
+                    return true;
+                }
+            });
+            $(".choMandatoryFields").each(function () {
+                var name = $(this).val();
+                if (name.length == 0 || name == null) {
+                    $(this).css('border-color', 'red');
+                    $(this).closest("div").find(".Mandatory1").show();
+
+                    isValid = false;
+                    // $(this).after('<div class="Mandatory" style="color:red">This is required field</div>');
+                }
+                else {
+                    //$(this).css('border-color', 'black');
+                    $(this).closest("div").find(".Mandatory1").hide();
+
+                    return true;
+                }
+            });
+
+
+            if (isValid == false) {
+                $("#saveCustomerBtn").prop('disabled', false);
+                e.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+               
+            }
+            else if (isValid == true) {
+                var formData = $('#CustomerForm').serialize();
+                $.ajax({
+                    type: "PUT",
+                    data: formData,
+                    url: "../api/CustomerWebAPI",
+                    dataType: "json",       //    if you want to return json data, enable this data type.
+                    success: function (data) {
+
+                        if (data == "Success") {
+
+                            if ($("#Id").val() == 0) {
+                                SFS.Alert("New customer has been created successfully", "success");
+                                oCustomerTable.fnDraw();
+                                $("#CustomerDetail").hide();
+                                $("#CustomerList").show();
+                                StockCategoryListArray = [];
+                            }
+                            else
+                            {
+                                SFS.Alert("Customer details has been updated successfully", "success");
+                                oCustomerTable.fnDraw();
+                                $("#CustomerDetail").hide();
+                                $("#CustomerList").show();
+                            }
+                        }
+                        else
+                        {
+                            if ($("#Id").val() != null) {
+                                SFS.Alert("Failed to create a new customer", "danger");
+                            }
+                            else
+                            {
+                                SFS.Alert("Failed to update a customer details", "danger");
+
+                            }
+                        }
+                        $("#saveCustomerBtn").prop('disabled', false);
+                        
+                        },
+                    error: function (request, status, error) {
+                        SFS.Alert("Failed to create/update a new customer", "danger");
+                        $("#saveCustomerBtn").prop('disabled', false);
+                    }
+                });
+            }
+
+        });
+    });
+        function GetNewCustomer()
+        {
+            $("#CustomerDetail").show();
+            $("#CustomerList").hide();
+            ResetValues();
+            $.ajax({
+                url: "../Master/CustomerCodeGen",
+                type: "POST",
+                async: true,
+                dataType: "json",
+                success: function (data) {
+                    if (data.Success) {
+                        $("#CustomerCode").val(data.code);
+                    }
+                    else {
+                        SFS.Alert("Failed to load the customer code", "danger");
+                    }
+                },
+                error: function (request, status, error) {
+                    SFS.Alert("Failed to load the customer code", "danger");
+                }
+            });
+
+        }
+
+        function ResetValues() {
+            $("#View").hide();
+            $("#BIButton").show();
+            $("#Id").val('0');
+            $("#CustomerCode").val('');
+            $("#CustomerName").val('');
+
+            $("#Address1").val('');
+            $("#Address2").val('');
+            $("#Pincode").val('');
+            $("#TypeofCustomer").val('');
+            $("#Sub_Group").val('').trigger('chosen:updated');
+            $("#TypeofCustomerMul").val('').trigger('chosen:updated');
+            $("#State").val('').trigger('chosen:updated');
+            $("#IsBranchAvailable").val('').trigger('chosen:updated');
+
+            $("#MailId").val('');
+            $("#ContactPerson").val('');
+            $("#ContactCodeNumber").val('');
+            $("#ContactNumber").val('');
+            $("#GSTNO").val('');
+            $(".Mandatory").remove();
+            $(".Mandatory1").hide();
+            $("#LedgerName").val('');
+            $("#Group").val('');
+
+            $(window).on('resize.chosen', function () {
+                $('.chosen-select').each(function () {
+                    var $this = $(this);
+                    $this.next().css({ 'width': $this.parent().width() });
+                })
+            }).trigger('resize.chosen');
+        }
+    </script>
+
+
+
+
+
+   
+
+
+
+
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+		jQuery(function ($) {
+			/////////////////////////////////////
+			$(document).one('ajaxloadstart.page', function (e) {
+				$tooltip.remove();
+			});
+			$('.chosen-select').chosen({ allow_single_deselect: true });
+		    //resize the chosen on window resize
+			$(window)
+            .off('resize.chosen')
+            .on('resize.chosen', function () {
+                $('.chosen-select').each(function () {
+                    var $this = $(this);
+                    $this.next().css({ 'width': $this.parent().width() });
+                });
+            }).trigger('resize.chosen');
+			$('.dialogs,.comments').ace_scroll({
+			    size: 300
+			});
+
+			$(".chosen-select").click(function (e) {
+			    e.stopPropagation()
+			});
+
+			//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+			//so disable dragging when clicking on label
+			var agent = navigator.userAgent.toLowerCase();
+			if (ace.vars['touch'] && ace.vars['android']) {
+				$('#tasks').on('touchstart', function (e) {
+					var li = $(e.target).closest('#tasks li');
+					if (li.length == 0) return;
+					var label = li.find('label.inline').get(0);
+					if (label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation();
+				});
+			}
+
+			$('#tasks').sortable({
+				opacity: 0.8,
+				revert: true,
+				forceHelperSize: true,
+				placeholder: 'draggable-placeholder',
+				forcePlaceholderSize: true,
+				tolerance: 'pointer',
+				stop: function (event, ui) {
+					//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+					$(ui.item).css('z-index', 'auto');
+				}
+			}
+			);
+			$('#tasks').disableSelection();
+			$('#tasks input:checkbox').removeAttr('checked').on('click', function () {
+				if (this.checked) $(this).closest('li').addClass('selected');
+				else $(this).closest('li').removeClass('selected');
+			});
+
+
+			//show the dropdowns on top or bottom depending on window height and menu position
+			$('#task-tab .dropdown-hover').on('mouseenter', function (e) {
+				var offset = $(this).offset();
+
+				var $w = $(window)
+				if (offset.top > $w.scrollTop() + $w.innerHeight() - 100)
+					$(this).addClass('dropup');
+				else $(this).removeClass('dropup');
+			});
+
+		})
+    </script>
+
+</body>
+</html>
