@@ -133,7 +133,7 @@ if($idupd>0)
                                        <div class="col-xl-6 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label >Customer Name</label>
-                                                <input type="text" tabindex="1" onkeyup="watch()" class="form-control" id="customername" name="customername" value="<?php if(isset($customername )) echo $customername ; ?>" placeholder="Enter Customer Name">
+                                                <input type="text" tabindex="2" onkeyup="watch()" class="form-control" id="customername" name="customername" value="<?php if(isset($customername )) echo $customername ; ?>" placeholder="Enter Customer Name">
                                                 <label id="customernamecheck" class="text-danger">Enter Customer Name</label>
 
                                             </div>
@@ -156,7 +156,7 @@ if($idupd>0)
                                     <div class="col-xl-6 col-lglg-4 col-md-6 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label for="inputEmail">Date Of Birth</label>
-                                            <input type="date" tabindex="5" class="form-control" id="dateofbirth" name="dateofbirth" value="<?php if(isset($dateofbirth )) echo $dateofbirth ; ?>">
+                                            <input type="date" tabindex="4" class="form-control" id="dateofbirth" name="dateofbirth" value="<?php if(isset($dateofbirth )) echo $dateofbirth ; ?>">
                                             <label id="dateofbirthcheck" class="text-danger">Select Date Of Birth</label>
 
                                         </div>
@@ -165,7 +165,7 @@ if($idupd>0)
                                     <div class="col-xl-6 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Age<span class="required">*</span></label>
-                                                <input type="number" id="age" tabindex="4" name="age" class="form-control"  value="<?php if(isset($age )) echo $age ; ?>" >
+                                                <input type="number" id="age" tabindex="5" name="age" class="form-control"  value="<?php if(isset($age )) echo $age ; ?>" >
                                                 <label id="agecheck" class="text-danger" >Enter Age</label>
                                             </div>
                                         </div>
@@ -173,7 +173,7 @@ if($idupd>0)
                                     <div class="col-xl-6 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Mobile Number <span class="required">*</span></label>
-                                                <input type="number" onkeyup="mobile()" id="mobilenumber" tabindex="4" name="mobilenumber" class="form-control"  value="<?php if(isset($mobilenumber )) echo $mobilenumber ; ?>" placeholder="Enter Mobile Number">
+                                                <input type="number" onkeyup="mobile()" id="mobilenumber" tabindex="6" name="mobilenumber" class="form-control"  value="<?php if(isset($mobilenumber )) echo $mobilenumber ; ?>" placeholder="Enter Mobile Number">
                                                 <label id="mobilenumbercheck" class="text-danger" >Enter Mobile Number</label>
                                             </div>
                                         </div><br><br>
@@ -215,7 +215,7 @@ if($idupd>0)
                               <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Whatsapp Number</label>
-                                                <input type="text" tabindex="6" id="whatsappnumber" name="whatsappnumber" class="form-control" value="<?php if(isset($whatsappnumber )) echo $whatsappnumber ; ?>">                                           
+                                                <input type="text" tabindex="8" id="whatsappnumber" name="whatsappnumber" class="form-control" value="<?php if(isset($whatsappnumber )) echo $whatsappnumber ; ?>">                                           
                                                 <label id="whatsappnumbercheck" class="text-danger">Enter Whatsapp Number</label>
                                                 </div>
                                         </div>
@@ -223,7 +223,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Anniversary Date</label>
-                                                <input type="date" tabindex="6" id="anniverserydate" name="anniverserydate" class="form-control" value="<?php if(isset($anniverserydate )) echo $anniverserydate ; ?>">
+                                                <input type="date" tabindex="9" id="anniverserydate" name="anniverserydate" class="form-control" value="<?php if(isset($anniverserydate )) echo $anniverserydate ; ?>">
                                                 <label id="anniverserydatecheck" class="text-danger">Select Anniversary Date</label>
                                             </div>
                                         </div>
@@ -231,7 +231,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Email Id</label>
-                                                <input type="email" tabindex="6" id="emailid" name="emailid" class="form-control" value="<?php if(isset($emailid )) echo $emailid ; ?>">
+                                                <input type="email" tabindex="10" id="emailid" name="emailid" class="form-control" value="<?php if(isset($emailid )) echo $emailid ; ?>">
                                                 <label id="emailidcheck" class="text-danger">Enter Email Id</label>
                                             </div>
                                         </div>
@@ -239,7 +239,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Need Membership</label>
-                                                <select class="form-control" tabindex="3" id="needmembership" name="needmembership">
+                                                <select class="form-control" tabindex="11" id="needmembership" name="needmembership">
                                                 
                                                 <option value=""> Select Membership</option>
                                                 <option <?php if(isset($needmembership)) { if($needmembership == "Yes" ) echo 'selected'; }  ?> value="Yes"> Yes</option>
@@ -253,7 +253,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">GST No</label>
-                                                <input type="text" tabindex="6" id="gstno" name="gstno" class="form-control" value="<?php if(isset($gstno )) echo $gstno ; ?>">
+                                                <input type="text" tabindex="12" id="gstno" name="gstno" class="form-control" value="<?php if(isset($gstno )) echo $gstno ; ?>">
                                                 <!-- <label id="gstnovalid" class="text-danger">Enter Valid GST Number</label> -->
                                                 <label id="gstnocheck" class="text-danger">Enter GST Number</label>
                                             </div>
@@ -262,7 +262,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Contact Persion</label>
-                                                <input type="text" tabindex="6" id="contactpersion" name="contactpersion" class="form-control" value="<?php if(isset($contactpersion )) echo $contactpersion ; ?>">
+                                                <input type="text" tabindex="13" id="contactpersion" name="contactpersion" class="form-control" value="<?php if(isset($contactpersion )) echo $contactpersion ; ?>">
                                                 <label id="contactpersioncheck" class="text-danger">Enter Contact Persion</label>
                                             </div>
                                         </div>
@@ -270,7 +270,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Address 1</label>
-                                                <input type="text" tabindex="6" id="address1" name="address1" class="form-control" value="<?php if(isset($address1 )) echo $address1 ; ?>">
+                                                <input type="text" tabindex="14" id="address1" name="address1" class="form-control" value="<?php if(isset($address1 )) echo $address1 ; ?>">
                                                 <label id="address1check" class="text-danger">Enter Address 1</label>
                                             </div>
                                         </div>
@@ -278,7 +278,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Address 2</label>
-                                                <input type="text" tabindex="6" id="address2" name="address2" class="form-control" value="<?php if(isset($address2 )) echo $address2 ; ?>">
+                                                <input type="text" tabindex="15" id="address2" name="address2" class="form-control" value="<?php if(isset($address2 )) echo $address2 ; ?>">
                                                 <label id="address2check" class="text-danger">Enter Address 2</label>
                                             </div>
                                         </div>
@@ -286,7 +286,7 @@ if($idupd>0)
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Pin Code</label>
-                                                <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>">
+                                                <input type="number" tabindex="16" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>">
                                                 <label id="pincodecheck" class="text-danger">Enter Pincode</label>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@ if($idupd>0)
                                             <div class="form-group">
                                                 <label for="disabledInput">Country</label>
                                                 <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->                                               
-                                                <select class="form-control chosen-select comp-field" name="country" id="countySel" size="1">
+                                                <select class="form-control chosen-select comp-field" tabindex="17" name="country" id="countySel" size="1">
                                                 <option value="" <?php if(isset($country)) { echo 'selected'; }  ?>  selected="selected">Select Country</option>
                                                 </select>
                                                 <label id="countrycheck" class="text-danger">Select Country</label>
@@ -304,7 +304,7 @@ if($idupd>0)
                                             <div class="form-group">
                                                 <label for="disabledInput">State</label>
                                                 <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->
-                                                <select class="form-control chosen-select comp-field" name="state" id="stateSel" size="1">
+                                                <select class="form-control chosen-select comp-field" tabindex="18" name="state" id="stateSel" size="1">
                                                 <option value="" <?php if(isset($state)) {  echo 'selected'; }  ?> selected="selected">Please select Country first</option>
                                                 </select>
                                                 <label id="statecheck" class="text-danger">Select State</label>
@@ -314,7 +314,7 @@ if($idupd>0)
                                             <div class="form-group">
                                                 <label for="disabledInput">District</label>
                                                 <!-- <input type="number" tabindex="6" id="pincode" name="pincode" class="form-control" value="<?php if(isset($pincode )) echo $pincode ; ?>"> -->
-                                                <select class="form-control chosen-select comp-field" name="district" id="districtSel" size="1">
+                                                <select class="form-control chosen-select comp-field" tabindex="19" name="district" id="districtSel" size="1">
                                                 <option value="" <?php if(isset($district)) { echo 'selected'; }  ?> selected="selected">Please select State first</option>
                                                 </select>
                                                 <label id="districtcheck" class="text-danger">Select District</label>
@@ -386,7 +386,7 @@ if($idupd>0)
                                 <div class="form-group">
                                     <label for="disabledInput">Type Of Customer</label>
                                     <!-- <input id="TypeofCustomer" name="TypeofCustomer" type="hidden" value="" /> -->
-                                    <select class="form-control" tabindex="3" id="typeofcustomer" name="typeofcustomer">     
+                                    <select class="form-control" tabindex="20" id="typeofcustomer" name="typeofcustomer">     
                                       <option value=""> Select Type</option>
                                       <option <?php if(isset($typeofcustomer)) { if($typeofcustomer == "Regular" ) echo 'selected'; }  ?> value="Regular"> Regular</option>
                                       <option <?php if(isset($typeofcustomer)) { if($typeofcustomer == "New" ) echo 'selected'; }  ?> value="New"> New</option>
@@ -398,7 +398,7 @@ if($idupd>0)
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputEmail">No of Visit</label>
-                                    <input type="number" tabindex="12" class="form-control" id="noofvisit" name="noofvisit"  value="<?php if(isset($noofvisit )) echo $noofvisit ; ?>">
+                                    <input type="number" tabindex="21" class="form-control" id="noofvisit" name="noofvisit"  value="<?php if(isset($noofvisit )) echo $noofvisit ; ?>">
                                     <label id="noofvisitcheck" class="text-danger">Enter number Of VIsit</label>           
 
                                 </div>
@@ -406,7 +406,7 @@ if($idupd>0)
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                             <div class="form-group">
                                     <label for="inputEmail">Frequency Of Visit</label>
-                                    <input type="number" tabindex="12" class="form-control" id="frequencyofvisit" name="frequencyofvisit"  value="<?php if(isset($frequencyofvisit )) echo $frequencyofvisit ; ?>">
+                                    <input type="number" tabindex="22" class="form-control" id="frequencyofvisit" name="frequencyofvisit"  value="<?php if(isset($frequencyofvisit )) echo $frequencyofvisit ; ?>">
                                     <label id="frequencyofvisitcheck" class="text-danger">Enter Frequency OF Visit</label>           
                                 </div>
                             </div>
@@ -447,7 +447,7 @@ if($idupd>0)
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                     <div class="form-group">
                                         <label >Sub Group</label>
-                                        <select class="form-control comp-field chosen-select choMandatoryFields" data-val="true" id="subgroup" name="subgroup">
+                                        <select class="form-control comp-field chosen-select choMandatoryFields" tabindex="23" data-val="true" id="subgroup" name="subgroup">
                                             <option value="">Select a Account Group...</option>
                                             <option <?php if(isset($subgroup)) { if($subgroup == "Reserve & Surplus" ) echo 'selected'; }  ?>  value="Reserve & Surplus">Reserve &amp; Surplus</option>
                                             <option <?php if(isset($subgroup)) { if($subgroup == "Sundry Creditors" ) echo 'selected'; }  ?> value="Sundry Creditors">Sundry Creditors</option>
@@ -478,7 +478,7 @@ if($idupd>0)
                                 <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                         <label for="inputEmail">Group</label>
-                                        <input type="text"  tabindex="12" class="form-control" id="group" name="groups"  value="<?php if(isset($groups )) echo $groups ; ?>">
+                                        <input type="text"  tabindex="24" class="form-control" id="group" name="groups"  value="<?php if(isset($groups )) echo $groups ; ?>">
                                         <!-- <label id="groupcheck" class="text-danger">Enter Frequency OF Visit</label>            -->
                                     </div>
                                 </div>
@@ -496,7 +496,7 @@ if($idupd>0)
                                 <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                         <label for="inputEmail">Ledger Name</label>
-                                        <input type="text" readonly  tabindex="12" class="form-control" id="ledgername" name="ledgername"  value="<?php if(isset($ledgername )) echo $ledgername ; ?>">
+                                        <input type="text" readonly  tabindex="25" class="form-control" id="ledgername" name="ledgername"  value="<?php if(isset($ledgername )) echo $ledgername ; ?>">
                                         <!-- <label id="frequencyofvisitcheck" class="text-danger">Enter Frequency OF Visit</label>            -->
                                     </div>
                                 </div>
@@ -506,7 +506,7 @@ if($idupd>0)
 
                                 <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                   <div class="custom-control custom-checkbox mt-4">
-                                     <input type="checkbox" tabindex="70" value="Yes"  <?php if($status==0){echo'checked';}?> tabindex="16"  class="custom-control-input" id="status" name="status">
+                                     <input type="checkbox" tabindex="26" value="Yes"  <?php if($status==0){echo'checked';}?> tabindex="16"  class="custom-control-input" id="status" name="status">
                                      <label class="custom-control-label" for="status">Status</label>
                                   </div><br /><br />
                                </div>
@@ -531,10 +531,10 @@ if($idupd>0)
                                     <div class="col-md-6">
                                                         <label class="control-label col-xs-12 col-sm-4 align-left bolder" for="password"></label>
                                                         <div class="col-xs-12 col-sm-8">
-                                                            <input type="checkbox" id="costcenter" name="costcenter" class="ace ace-checkbox-2" value="Yes" <?php if(isset($costcenter)=="Yes"){echo'checked';}?> />
+                                                            <input type="checkbox" tabindex="27" id="costcenter" name="costcenter" class="ace ace-checkbox-2" value="Yes" <?php if(isset($costcenter)=="Yes"){echo'checked';}?> />
                                                             <label class="lbl" for="ace-settings-navbar"> Cost Center</label>
                                                             <!-- <input id="CostCenterYesNo" name="CostCenterYesNo" type="hidden" value="" /> -->
-                                                            &nbsp;<input type="checkbox" id="inventory" name="inventory" class="ace ace-checkbox-2"  value="Yes" <?php if(isset($inventory)=="Yes"){echo'checked';}?>/>
+                                                            &nbsp;<input type="checkbox" tabindex="28" id="inventory" name="inventory" class="ace ace-checkbox-2"  value="Yes" <?php if(isset($inventory)=="Yes"){echo'checked';}?>/>
                                                             <label class="lbl" for="ace-settings-navbar"> Inventory</label>
                                                             <!-- <input id="InventoryYesNo" name="InventoryYesNo" type="hidden" value="" /> -->
                                                         </div>                                                        
@@ -544,16 +544,16 @@ if($idupd>0)
                         </div>
                         <div class="row ">
 					   <div class="col-md-2 d-flex" > 
-						<button type="button" id="customerdownload" name="customerdownload" tabindex="71" class="btn btn-primary mb-2"><span class="icon-download"></span>Download</button>
-						<button type="button" id="customerupload" name="customerupload" onclick="customerBulkupload()" tabindex="72" class="btn btn-primary mb-2 ml-2"><span class="icon-upload"></span>Upload</button>
+						<button type="button" id="customerdownload" name="customerdownload" tabindex="29" class="btn btn-primary mb-2"><span class="icon-download"></span>Download</button>
+						<button type="button" id="customerupload" name="customerupload" onclick="customerBulkupload()" tabindex="30" class="btn btn-primary mb-2 ml-2"><span class="icon-upload"></span>Upload</button>
 					   </div>
 					        <div class="col-md-2"> </div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2 ">						
-							<button type="submit" name="submitcustomer" id="submitcustomer"  class="btn btn-primary"  tabindex="73">Submit</button>
-						    <button type="button" class="btn btn-outline-secondary" tabindex="74">Cancel</button>		
+							<button type="submit" name="submitcustomer" id="submitcustomer"  class="btn btn-primary"  tabindex="31">Submit</button>
+						    <button type="button" class="btn btn-outline-secondary" tabindex="32">Cancel</button>		
 					  </div>
                         
                          </div>
