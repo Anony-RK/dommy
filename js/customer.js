@@ -605,8 +605,8 @@ function mobilenumber() {
       }
 });
 
-$('#mobilenumber').mask('9999999999');
-$('#pincode').mask('999999');
+// $('#mobilenumber').mask('9999999999');
+// $('#pincode').mask('999999');
 
 
 $("#employeedownload").click(function () {
@@ -615,15 +615,15 @@ $("#employeedownload").click(function () {
 
 });
 
-$("#typeofcustomers").each(function () {
+// $("#typeofcustomers").each(function () {
 
-  if ($(this).val() != null && $(this).val() != "") {
+//   if ($(this).val() != null && $(this).val() != "") {
 
-      StockCategoryListArray.push($(this).val());
+//       StockCategoryListArray.push($(this).val());
 
-  }
-});
-$("#TypeofCustomer").val(StockCategoryListArray);
+//   }
+// });
+// $("#TypeofCustomer").val(StockCategoryListArray);
 
 
 function customerBulkupload(){
@@ -646,4 +646,30 @@ function customerBulkupload(){
     
   // State, Country,district Select option 
 
- 
+//   function funs(){
+//     var distval = document.getElementById("district").value;
+// var tamilnadu = ["Ariyalur", "Chengalpattu","Chennai", "Coimbatore",
+//         "Cuddalore", "Dharmapuri","Dindigul", "Erode",
+//         "Kallakurichi", "Kanchipuram","Kanyakumari",
+//         "Karur", "Krishnagiri","Madurai", "Mayiladuthurai",
+//         "Nagapattinam", "Nilgiris","Namakkal", "Perambalur",
+//         "Pudukkottai", "Ramanathapuram","Ranipet", "Salem",
+//         "Sivaganga", "Tenkasi","Tirupur", "Tiruchirappalli",
+//         "Theni", "Tirunelveli","Thanjavur", "Thoothukudi",
+//         "Tirupattur", "Tiruvallur","Tiruvarur", "Tiruvannamalai",
+//         "Vellore", "Viluppuram","Virudhunagar"];  
+
+
+//      tamilnadu.forEach(() => {
+//             for(var i = 0; i< tamilnadu.length;i++) {
+//                 console.log(tamilnadu[i]);
+//                 // if(tamilnadu[i] == distval ) {
+//                 //     document.getElementById("state").value="tamil nadu";
+//                 //     document.getElementById("country").value="india";
+//                 // }
+//             }
+               
+            
+//         });
+      
+//  }
