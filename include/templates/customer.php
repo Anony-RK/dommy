@@ -309,9 +309,10 @@ var tamilnadu = ["Ariyalur", "Chengalpattu","Chennai", "Coimbatore",
             for(var i = 0; i< tamilnadu.length;i++) {
                 // console.log(tamilnadu[i]);
                 if(tamilnadu[i] == distval ) {
-                    document.getElementById('state').value="Tamil Nadu";
-                    document.getElementById('country').value="India";
+                    document.getElementById("state").value="Tamil Nadu";
+                    document.getElementById("country").value="India";
                 }
+                
             }
                
             
@@ -370,14 +371,14 @@ var tamilnadu = ["Ariyalur", "Chengalpattu","Chennai", "Coimbatore",
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">State</label>
-                                                 <input type="number" readonly tabindex="6" id="state" name="state" class="form-control" value="" <?php if(isset($state )) echo $state ; ?>> 
+                                                 <input type="text" readonly tabindex="6" id="state" name="state" class="form-control" value="<?php if(isset($state )) echo $state ; ?>" > 
                                                 <!-- <label id="statecheck" class="text-danger">Select State</label> -->
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label for="disabledInput">Country</label>
-                                                <input type="number" tabindex="6" id="country" name="country" class="form-control" value="" <?php if(isset($country )) echo $country ; ?>>                                               
+                                                <input type="text" tabindex="6" id="country" name="country" class="form-control" value="<?php if(isset($country )) echo $country ; ?>"  >                                               
                                                
                                                 <!-- <label id="countrycheck" class="text-danger">Select Country</label> -->
                                             </div>
