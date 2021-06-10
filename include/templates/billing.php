@@ -1,73 +1,4 @@
-<?php 
-$id=0;
- if(isset($_POST['submitbill']) )
- {
-   
-    if($_POST['financialyear'] != '' && $_POST['classification'] != '' && $_POST['description'] != ''
- && $_POST['tax'] != '' && $_POST['cess'] != '' &&
-$_POST['addl'] != '' && $_POST['total'] != '' )
-  {
-    if(isset($_POST['id']) && $_POST['id'] >0 && is_numeric($_POST['id'])){		
-        $id = $_POST['id']; 	
-    $updatebill = $userObj->updatebill($mysqli,$id);  
-    ?>
-   <script>location.href='<?php echo $HOSTPATH;  ?>taxmaster&msc=2';</script> 
-    <?php	}
-    else{   
-		$addbill = $userObj->addbill($mysqli);   
-        
-        ?>
-        
-     <script>location.href='<?php echo $HOSTPATH;  ?>taxmaster&msc=1';</script>
-        <?php
-    }
-  }
- }  
- 
- $del=0;
-if(isset($_GET['del']))
-{
-$del=$_GET['del'];
-}
-if($del>0)
-{
-	$deletebill = $userObj->deletebill($mysqli,$del); 
-	?>
-	<script>location.href='<?php echo $HOSTPATH;  ?>taxmaster&msc=3';</script>
-<?php	
-}
 
-
-
-if(isset($_GET['upd']))
-{
-$idupd=$_GET['upd'];
-}
-$status =0;
-if($idupd>0)
-{
-	$getbill = $userObj->getbill($mysqli,$idupd); 
-	
-	if (sizeof($gettaxmaster)>0) {
-        for($tax=0;$tax<sizeof($gettaxmaster);$tax++)  {	
-            $taxid              = $gettaxmaster['taxid'];
-            $financialyear      = $gettaxmaster['financialyear'];
-			$classification     = $gettaxmaster['classification'];
-			$description      	= $gettaxmaster['description'];
-            $tax     	        = $gettaxmaster['tax'];
-
-            $cess     	        = $gettaxmaster['cess'];
-            $addl      			= $gettaxmaster['addl'];
-			$total       	    = $gettaxmaster['total'];
-			
-		
-            $status	    		= $gettaxmaster['status'];
-
-		}
-	}
-}
-?>
-  
 
 
 <!-- Page header start -->
@@ -125,7 +56,6 @@ if($idupd>0)
 
         while($data = mysqli_fetch_array($records))
         {?>
-            <!-- echo "<option value='". $data['itemname'] ."'>" .$data['itemname'] ."</option>";  // displaying data in option menu -->
       
 
                                 <div class="d-flex ">
@@ -178,11 +108,11 @@ while($data = mysqli_fetch_array($records))
                                     </tr>
                                     <tr>
                                       <td>GSTIN</td>
-                                      <td><input type="text" class="form-control" value=" <?php  echo $data['address1'].",". $data['address2'].",". $data['district'].",".$data['state'].",".$data['country'].",".$data['pincode']; ?>" ></td>  
+                                      <td><input type="text" class="form-control" value=" <?php  echo $data['gstno']; ?>"></td>  
                                     </tr>
                                     <tr>
                                       <td>Address</td>
-                                      <td><input type="text" class="form-control" value=" <?php  echo $data['gstno']; ?>"></td>  
+                                      <td><input type="text" class="form-control"   value=" <?php  echo $data['address1'].",". $data['address2'].",". $data['district'].",".$data['state'].",".$data['country'].",".$data['pincode']; ?>" ></td>  
                                     </tr>
                                     <tr>
                                       <td>Ref.No</td>
@@ -218,11 +148,11 @@ while($data = mysqli_fetch_array($records))
 											</tr>
                                             <tr>
 											  <td>GSTIN</td>
-											  <td><input type="text" class="form-control" value="<?php  echo $data['address1'].",". $data['address2'].",". $data['district'].",".$data['state'].",".$data['country'].",".$data['pincode']; ?>" ></td>  
+											  <td><input type="text" class="form-control" value=" <?php  echo $data['gstno']; ?>" ></td>  
 											</tr>
                                             <tr>
 											  <td>Delivery Address</td>
-											  <td><input type="text" class="form-control" value=" <?php  echo $data['gstno']; ?>"></td>  
+											  <td><input type="text" class="form-control"  value="<?php  echo $data['address1'].",". $data['address2'].",". $data['district'].",".$data['state'].",".$data['country'].",".$data['pincode']; ?>" ></td>  
 											</tr>
                                             <tr>
 											  <td>Contact No</td>
@@ -306,15 +236,15 @@ while($data = mysqli_fetch_array($records))
                       </div>
                       <div class="total d-flex justify-content-between" id="alltotal">
                         <p>Total Discount</p>
-                        <input type="text" class="form-control w-50 " id="alldiscount" name="alldiscount">
+                        <input type="text" class="form-control w-50 " id="totaldiscount" name="totaldiscount">
                       </div>
                       <div class="total d-flex justify-content-between" id="alltotal">
                         <p>CGST</p>
-                        <input type="text" class="form-control w-50 " id="allcgst" name="allcgst">
+                        <input type="text" class="form-control w-50 " id="totalcgst" name="totalcgst">
                       </div>
                       <div class="total d-flex justify-content-between" id="alltotal">
                         <p>SGST</p>
-                        <input type="text" class="form-control w-50 " id="allsgst" name="allsgst">
+                        <input type="text" class="form-control w-50 " id="totalsgst" name="totalsgst">
                       </div>
                       
                       <div class="total d-flex justify-content-between" id="alltotal">
@@ -331,6 +261,75 @@ while($data = mysqli_fetch_array($records))
                       </div>
                     </div>
                   </div>
+
+
+
+
+
+                  <!---------------------------------------->
+
+                  <!-- <div id="msg"></div>
+		<form id="form" method="post" onSubmit="return false;">
+			<input type="hidden" name="action" value="saveAddMore">
+			<table class="table table-bordered table-striped" id="sortable">
+				<thead>
+					<tr>
+						<th >Sr#</th>
+						<th  class="text-center">Insetion Date</th>
+						<th>User Name</th>
+						<th >User Country</th>
+						<th>User Email</th>
+						<th>User Phone#</th>
+					</tr>
+				</thead>
+				<tbody id="tb"> -->
+					<?php 
+					// $result	=	$->query("SELECT * FROM reorderusers ORDER BY userorder ASC ");
+					// if($result->num_rows>0){
+					// 	$s	=	'';
+					// 	while($val  =   $result->fetch_assoc()){
+					// 		$s++;  ?>
+					
+					<!-- <tr >
+							  <td>1.</td>
+							  <td>
+
+                <select class="form-control" id="products" name="products">
+                 <option disabled selected>-- Select City --</option>
+    <?php -->
+        //  include "api/iedit-config.php";  // Using database connection file here
+        // $records = mysqli_query($mysqli, "SELECT itemname From item");  // Use select query here 
+
+        // while($data = mysqli_fetch_array($records))
+        // {
+        //     echo "<option value='". $data['itemname'] ."'>" .$data['itemname'] ."</option>";  // displaying data in option menu
+        // }	
+    ?>  
+  </select>
+                                            </td>
+                                              <td><input type="text"  class="form-control"  id="qty" name="qty"></td>											 																						  
+                                              <td><input type="text"  class="form-control" onkeyup="calculate()"  id="rate" name="rate"></td>
+                                              <td><label  type="text" id="total" name="total" ></label></td>
+                                              <td><input type="text"  class="form-control"  onkeyup="discount()" name="discount" id="discount"></td>
+                                              <td><input type="text"  class="form-control"  name="taxablevalue" id="taxablevalue"></td>
+                                              <td> 6%</td>
+                                              <td><input type="text" readonly class="form-control" value="" id="cgstrate" name="cgstrate"></td>
+                                              <td>6%</td>
+                                              <td><input type="text" readonly class="form-control" value="" id="sgstrate" name="sgstrate"></td>
+                                              <td><input type="text"  class="form-control" value="" onchange='addItem();' id="totalamount" name="totalamount"></td>
+										</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="6">
+							<a href="javascript:;" class="btn btn-danger" id="addmore"><i class="fa fa-fw fa-plus-circle"></i> Add More</a>
+							<button type="submit" name="save" id="save" value="save" class="btn btn-primary" ><i class="fa fa-fw fa-save"></i> Save</button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+                  <!---------------------------------------->
                       <!-- <table class="table custom-table table-stritched table-sm"> 
                          <tbody>
                              <tr>

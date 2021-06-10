@@ -267,4 +267,7 @@
 			<?php }  if($current_page == 'purchase') { ?>
 				<script src="js/purchaseorder.js"></script>
 
-				<?php }?>
+				<!-- <?php// } if($current_page == 'purchase') {?>
+					<script src="js/newscript.js"></script>
+
+				<?php//}?> -->

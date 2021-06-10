@@ -181,6 +181,13 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : null;
                 <?php   if($current_page == 'editbilling') { ?>
 				<?php include "include/templates/editbilling.php"?>
                 <?php   } ?>
+
+				<?php   //if($current_page == 'newscript') { ?>
+				<?php //include "include/templates/newscript.php"?>
+                <?php  // } ?>
+                <?php  // if($current_page == 'editbilling') { ?>
+				<?php //include "include/templates/editbilling.php"?>
+                <?php  // } ?>
 				<!-- Main container end -->
 
 			</div>

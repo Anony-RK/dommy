@@ -1,14 +1,50 @@
 
-$(document).ready(function(){
-    var i=1;
-   $("#add_row").click(function(){
-    $('#addr'+(i-1)).find('input').attr('disabled',true);
-    $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input type='text' name='uid"+i+"' placeholder='User ID' class='form-control input-md'/></td><td><input type='text' name='uname"+i+"' placeholder='Name' class='form-control input-md'/></td><td><input type='text' name='nic"+i+"' placeholder='NIC' class='form-control input-md'/></td><td><input type='text' name='amount"+i+"' placeholder='Amount' class='form-control input-md'/></td><td><input type='date' name='dt"+i+"' placeholder='Date' class='form-control input-md'/></td>");
+$(document).ready(function(e) {
+    $('.selectpicker').selectpicker();
+    
+    $('body').on('mousemove',function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    
+    $("#addmore").on("click",function(){
+        $.ajax({
+            type:'POST',
+            url:'action-form.ajax.php',
+            data:{'action':'addDataRow'},
+            success: function(data){
+                $('#tb').append(data);
+                $('.selectpicker').selectpicker('refresh');
+                $('#save').removeAttr('hidden',true);
+            }
+        });
+    });
+    
+    $("#form").on("submit",function(){
+        $.ajax({
+            type:'POST',
+            url:'action-form.ajax.php',
+            data:$(this).serialize(),
+            success: function(data){
+                var a	=	data.split('|***|');
+                if(a[1]=="add"){
+                    $('#mag').html(a[0]);
+                    setTimeout(function(){location.reload();},1500);
+                }
+            }
+        });
+    });
+    
+});
 
-    $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-    i++; 
-});
-});
+
+
+
+
+
+
+
+
+
 
 
 var markup = "<option value=''>Select a Item</option>";
@@ -99,17 +135,6 @@ markup1="<option value=''>Select a Item</option>";
 
                    for(var a = 0;a>=0;a++)    {
 
-                                     
-                  //   function calculate() {
-                  //      var myBox1 = document.getElementsByClassName('qty[a]').value; 
-                  //      var myBox2 = document.getElementsByClassName('rate[a]').value;
-                  //      var result = document.getElementsByClassName('total[a]'); 
-                  //      var myResult = myBox1 * myBox2;
-                  //      result.value = myResult;
-
-                      
-
-                  //    }
                      function discount() {
                         var result = document.getElementsByClassName('total[a]').value
                         var discount = document.getElementsByClassName('discount[a]').value;
@@ -165,16 +190,19 @@ markup1="<option value=''>Select a Item</option>";
                  });
       //   });
      
-                 $("#shippingcharges").keyup(function (e) {
+                 $("#alltotal").keyup(function (e) {
                      TotalCalculate();
                  });
-                 $("#handlingcharges").keyup(function (e) {
+                 $("#totaldiscount").keyup(function (e) {
                      TotalCalculate();
                  });
-                 $("#othercharges").keyup(function (e) {
+                 $("#totalcgst").keyup(function (e) {
                      TotalCalculate();
                  });
-                 
+                 $("#totalsgst").keyup(function (e) {
+                    TotalCalculate();
+                });
+               
                  function TotalCalculate() {
                      var qty = 0;
                      var rate = 0;
@@ -191,25 +219,45 @@ markup1="<option value=''>Select a Item</option>";
                              alltotals = alltotals + parseInt($(this).val());
                          }
                      });
-                     $('input[name="taxcal[]"]').each(function () {
+                     $('input[name="discount[]"]').each(function () {
                          if ($(this).val() != '') {
-                             taxtotal = taxtotal + parseInt($(this).val());
+                            discount = discount + parseInt($(this).val());
                          }
                      });
-                     if ($("#shippingcharges").val != "" && $("#shippingcharges").val() != 0)
+                     $('input[name="rate[]"]').each(function () {
+                        if ($(this).val() != '') {
+                           rate = rate + parseInt($(this).val());
+                        }
+                    });
+
+                    $('input[name="sgstrate[]"]').each(function () {
+                        if ($(this).val() != '') {
+                            sgstrate = sgstrate + parseInt($(this).val());
+                        }
+                    });
+
+                    $('input[name="cgstrate[]"]').each(function () {
+                        if ($(this).val() != '') {
+                            cgstrate = cgstrate + parseInt($(this).val());
+                        }
+                    });
+                     if ($("#alltotal").val != "" && $("#alltotal").val() != 0)
                      {
-                         shippingcharges = parseInt($("#shippingcharges").val());
+                        alltotal = parseInt($("#alltotal").val());
                      }
-                     if ($("#handlingcharges").val != "" && $("#handlingcharges").val() != 0) {
-                         handlingcharges =  parseInt($("#handlingcharges").val());
+                     if ($("#totaldiscount").val != "" && $("#totaldiscount").val() != 0) {
+                        totaldiscount =  parseInt($("#totaldiscount").val());
                      }
-                     if ($("#othercharges").val != "" && $("#othercharges").val() != 0) {
-                         othercharges = parseInt($("#othercharges").val());
+                     if ($("#totalcgst").val != "" && $("#totalcgst").val() != 0) {
+                        totalcgst = parseInt($("#totalcgst").val());
                      }
-                     totalpovalue = parseInt(subtotal) + parseInt(taxtotal) + parseInt(shippingcharges) + parseInt(handlingcharges)+ parseInt(othercharges);
-                     $("#subtotal").val(subtotal);
-                     $("#taxamount").val(taxtotal);
-                     $("#totalpo").val(totalpovalue);
+                     if ($("#totalsgst").val != "" && $("#totalsgst").val() != 0) {
+                        totalsgst = parseInt($("#totalsgst").val());
+                     }
+                    
+                     totalinvoicevalue = parseInt(alltotal) + parseInt(totalcgst) + parseInt(totalsgst);
+                     
+                     $("#totalinvoicevalue").val(totalinvoicevalue);
                  }
      
      
