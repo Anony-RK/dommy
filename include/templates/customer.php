@@ -261,9 +261,9 @@ if($idupd>0)
 
                                         <div class="col-xl-4 col-lglg-4 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
-                                                <label for="disabledInput">Contact Persion</label>
+                                                <label for="disabledInput">Contact Person</label>
                                                 <input type="text" tabindex="13" id="contactpersion" name="contactpersion" class="form-control" value="<?php if(isset($contactpersion )) echo $contactpersion ; ?>">
-                                                <label id="contactpersioncheck" class="text-danger">Enter Contact Persion</label>
+                                                <label id="contactpersioncheck" class="text-danger">Enter Contact Person</label>
                                             </div>
                                         </div>
 

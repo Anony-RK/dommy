@@ -39,13 +39,12 @@
 						</div> -->
 
                                 <div class="container-fluid">
-                                <h6 class="text-center">ON: (for Companies Only)</h6><br><br> 
+                                <h6 class="text-center">ON: for Companies Only</h6><br><br> 
                                 <h4 style="margin-left:600px;padding-bottom:10px;"><a style="border-bottom:2px solid gray;">Name Of Ther Supplier</a></h4>
 
 					  <!-- Row start -->
-					       <div class="row gutters ">
+					            <div class="row gutters ">
                                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                                <!-- xjhdfushj -->
                                 <img src="./img/logo.png" alt="Feathers" style="width:300px;height:100px;">
                                 </div>
                                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -75,8 +74,7 @@
                                     <b><h5>E-Mail     :</h5></b>
                                     <label for=""  style="margin-left:81px;"> <?php  echo $data['email']; ?></label><br>
                                 </div>
-                                <?php  }	
-    ?> 
+                                <?php  }	?> 
                                 </div>
 					        </div><br><br>
 					<!-- Row end -->
@@ -95,7 +93,7 @@
 
                     <?php
 
-// include "api/iedit-config.php";  // Using database connection file here
+include "api/iedit-config.php";  // Using database connection file here
   $records = mysqli_query($mysqli, "SELECT customername,gstno,address1,address2,district,state,country,pincode,customercode From customer WHERE customername = 'validate'");  // Use select query here 
 
 while($data = mysqli_fetch_array($records))
@@ -135,7 +133,7 @@ while($data = mysqli_fetch_array($records))
 										<tbody>
                     <?php
 
-// include "api/iedit-config.php";  // Using database connection file here
+include "api/iedit-config.php";  // Using database connection file here
   $records = mysqli_query($mysqli, "SELECT customername,gstno,address1,address2,district,state,country,pincode,customercode From customer WHERE customername = 'validate'");  // Use select query here 
 
 while($data = mysqli_fetch_array($records))
@@ -414,7 +412,7 @@ while($data = mysqli_fetch_array($records))
 
                                     <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                             <div class="custom-control custom-checkbox mt-4">
-                            <input type="checkbox" value="Yes"  <?php if($status==0){echo'checked'; } ?> tabindex="25"  class="custom-control-input" id="status" name="status">
+                            <input type="checkbox" value="Yes"  <?php  if($status==0) { echo 'checked'; //} ?> tabindex="25"  class="custom-control-input" id="status" name="status">
 										<label class="custom-control-label" for="status">Status</label>
 									
                             </div><br /><br />

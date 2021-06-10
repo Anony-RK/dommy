@@ -167,7 +167,7 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : null;
 
 				  <!-- Billing Master-->
 				  <?php   if($current_page == 'billing') { ?>
-				<?php include "include/templates/billing.php"?>
+				<?php include "include/templates/billingmaster.php"?>
                 <?php   } ?>
                 <?php   if($current_page == 'editbilling') { ?>
 				<?php include "include/templates/editbilling.php"?>
@@ -175,12 +175,12 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : null;
 
 
 				<!-- Billing Master-->
-				<?php   if($current_page == 'purchase') { ?>
-				<?php include "include/templates/purchaseorder.php"?>
+				<?php   if($current_page == 'billingmaster') { ?>
+				<?php include "include/templates/billingmaster.php"?>
                 <?php   } ?>
-                <?php   if($current_page == 'editbilling') { ?>
-				<?php include "include/templates/editbilling.php"?>
-                <?php   } ?>
+                <?php   //if($current_page == 'editbilling') { ?>
+				<?php //include "include/templates/editbilling.php"?>
+                <?php //  } ?>
 
 				<?php   //if($current_page == 'newscript') { ?>
 				<?php //include "include/templates/newscript.php"?>
