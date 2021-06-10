@@ -2190,6 +2190,27 @@ $res =$mysqli->query($updateQry)or die("Error in in update Query!.".$mysqli->err
 	  }
 	  return $detailrecords;
   }
+
+
+
+  public function addbill($mysqli) {
+	  
+        // $sql = "INSERT INTO invoices (customerName) VALUES ('$customerName')";
+        // mysqli_query($conn, $sql);
+        // $invoiceId = mysqli_insert_id($conn);
+ 
+        for ($a = 0; $a < count($_POST["qty"]); $a++)
+        {
+            $sql = "INSERT INTO bills (qty, rate, total,discount,taxablevalue,cgstrate,sgstrate,amount,totalamount) VALUES (
+				'" . $_POST["qty"][$a] . "', '" . $_POST["rate"][$a] . "',
+				'" . $_POST["total"][$a] . "','" . $_POST["discount"][$a] . "'
+	     ,'" . $_POST["taxablevalue"][$a] . "','" . $_POST["cgstrate"][$a] . "',
+		 '" . $_POST["sgstrate"][$a] . "','" . $_POST["amount"][$a] . "',
+		 '" . $_POST["totalamount"][$a] . "')";
+            mysqli_query($conn, $sql);
+      }
+ 
+  }
 	}
 	
 ?>

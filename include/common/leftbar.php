@@ -69,6 +69,18 @@
 									<span class="">Tax Master</span>
 								</a>								
 							</li>
+							<li >
+								<a href="billing">
+									<i class="icon-note"></i>
+									<span class="">Billing</span>
+								</a>								
+							</li>
+							<li >
+								<a href="purchase">
+									<i class="icon-note"></i>
+									<span class="">purchase</span>
+								</a>								
+							</li>
 							
 						</ul>
 					</div>

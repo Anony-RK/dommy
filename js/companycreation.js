@@ -238,6 +238,26 @@ else {
 	gstcheck = true;	
 }
 }
+$('#gst').keyup(function () {
+	this.value = this.value.toUpperCase();
+});
+function GSTCheck() {
+	var regex2 = /^([0-9]){2}([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}([0-9]){1}([a-zA-Z]){1}([a-zA-Z0-9]){1}?$/; //this is the pattern of GST No expersion
+	var a = document.getElementById('gstno').value;
+	if (a != null && a != "") {
+		if (regex2.test(a) == false) {
+			$("#gstcheck").show();
+			$("#gst").val('');
+			return false;
+		}
+		else {
+			$("#gstcheck").hide();
+		}
+	}
+}
+$("#gst").blur(function () {
+	GSTCheck();
+});
 
 // Validate pfno
 $('#pfnocheck').hide();	

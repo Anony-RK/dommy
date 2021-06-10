@@ -164,6 +164,23 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : null;
                 <?php   if($current_page == 'edittaxmaster') { ?>
 				<?php include "include/templates/edittaxmaster.php"?>
                 <?php   } ?>
+
+				  <!-- Billing Master-->
+				  <?php   if($current_page == 'billing') { ?>
+				<?php include "include/templates/billing.php"?>
+                <?php   } ?>
+                <?php   if($current_page == 'editbilling') { ?>
+				<?php include "include/templates/editbilling.php"?>
+                <?php   } ?>
+
+
+				<!-- Billing Master-->
+				<?php   if($current_page == 'purchase') { ?>
+				<?php include "include/templates/purchaseorder.php"?>
+                <?php   } ?>
+                <?php   if($current_page == 'editbilling') { ?>
+				<?php include "include/templates/editbilling.php"?>
+                <?php   } ?>
 				<!-- Main container end -->
 
 			</div>

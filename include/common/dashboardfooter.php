@@ -49,6 +49,7 @@
 		<script src="js/moment.js"></script>
 	<!-- Font -->
 		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>  
 
@@ -261,4 +262,9 @@
 			<script src="js/customer.js"></script>
 			<?php } if($current_page == 'taxmaster') { ?>
 			<script src="js/taxmaster.js"></script>
-			<?php }   ?>
+			<?php }  if($current_page == 'billing') {  ?>
+			<script src="js/billing.js"></script>
+			<?php }  if($current_page == 'purchase') { ?>
+				<script src="js/purchaseorder.js"></script>
+
+				<?php }?>
