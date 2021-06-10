@@ -131,16 +131,36 @@ markup1="<option value=''>Select a Item</option>";
                      // var  qty = Rate;
                      var  rate = 0;
                      var taxcal = 0;
-                     if (discount != "" && discount != 0) {
-                         rate = parseInt(discount);
-                     }
+                    
                      total = parseInt(qty) * parseInt(Rate);
                      $(this).parent().parent().find(".total").val(total);
+                     if (discount != "" && discount != 0) {
+                        discount = parseInt(discount);
+                        var tots = parent().parent().find(".total").val();
+                         taxable = tots-discount;
+                          $(this).parent().parent().find(".taxablevalue").val(taxable);
+
+                    }
      
-                     if (Objtax != "" && Objtax != 0) {
-                         taxcal = (parseInt(total) * parseInt(Objtax)) / 100;
+                     if (taxable != "" && taxable != 0) {
+                        var taxable= $(this).parent().parent().find(".taxable").val();
+                         taxrate = (6 * parseInt(taxable)) / 100;
+                          $(this).parent().parent().find(".cgstrate").val(taxrate);
+                          $(this).parent().parent().find(".cgstrate").val(taxrate);
+
+                          var cgstrate= $(this).parent().parent().find(".cgstrate").val();
+                          var sgstrate= $(this).parent().parent().find(".cgstrate").val();
+                          var taxable= $(this).parent().parent().find(".taxablevalue").val();
+                          alltotals  = cgstrate + sgstrate + taxable;
+
+
+                          $(this).parent().parent().find(".totals").val(alltotals);
+                           $(this).parent().parent().find(".alltotalamount").val(alltotals);
+
+
+
                      }
-                     $(this).parent().parent().find(".taxcal").val(taxcal);
+                     // $(this).parent().parent().find(".taxcal").val(taxcal);
                      TotalCalculate();
                  });
       //   });
@@ -156,15 +176,19 @@ markup1="<option value=''>Select a Item</option>";
                  });
                  
                  function TotalCalculate() {
-                     var subtotal = 0;
-                     var taxtotal = 0;
-                     var shippingcharges = 0;
-                     var handlingcharges = 0;
-                     var othercharges = 0;
-                     var totalpovalue = 0;
-                     $('input[name="totval[]"]').each(function () {
+                     var qty = 0;
+                     var rate = 0;
+                     var total = 0;
+                     var discount = 0;
+                     var cgst = 0;
+                     var taxableamount = 0;
+                     var cgst = 0;
+                     var sgst = 0;
+                     var totals =0;
+                     alltotals = 0;
+                     $('input[name="alltotalamount[]"]').each(function () {
                          if ($(this).val() != '') {
-                             subtotal = subtotal + parseInt($(this).val());
+                             alltotals = alltotals + parseInt($(this).val());
                          }
                      });
                      $('input[name="taxcal[]"]').each(function () {

@@ -216,8 +216,9 @@ $(document).on('change', '.Partcode', function (e) {
                 $(this).parent().parent().find(".totval").val(total);
 
                 if (Objtax != "" && Objtax != 0) {
-                    taxcal = (parseInt(total) * parseInt(Objtax)) / 100;
                 }
+                                    taxcal = (parseInt(total) * parseInt(Objtax)) / 100;
+
                 $(this).parent().parent().find(".taxcal").val(taxcal);
                 TotalCalculate();
             });
